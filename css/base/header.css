@@ -1,5 +1,5 @@
 /* ==================================================
- [00]  기본 리셋
+  [00]  기본 리셋
 ================================================== */
 html,
 body {
@@ -7,15 +7,17 @@ body {
   padding: 0;
   overflow-x: hidden;
 }
+
 /* ==================================================
- [01] HEADER
+  [01] HEADER
 ================================================== */
 .header {
   width: 100%;
   background: #fff;
   border-bottom: 1px solid #ddd;
   position: relative;
-  z-index: 5000; /* nav_bottoms 보다 크게 */
+  z-index: 5000;
+  /* nav_bottoms 보다 크게 */
 }
 
 .header-inner {
@@ -33,7 +35,7 @@ body {
 }
 
 /* ==================================================
- [02]Logo
+  [02]Logo
 ================================================== */
 .logo img {
   width: 140px;
@@ -41,7 +43,7 @@ body {
 }
 
 /* ==================================================
- [03] 오른쪽 그룹
+  [03] 오른쪽 그룹
 ================================================== */
 .right-group {
   display: flex;
@@ -49,8 +51,9 @@ body {
   gap: 20px;
   flex-shrink: 0;
 }
+
 /* ==================================================
- [04] 온라인몰 & 프랜차이즈
+  [04] 온라인몰 & 프랜차이즈
 ================================================== */
 
 .orin,
@@ -66,13 +69,15 @@ body {
 }
 
 
-.prch ,.orin{
+.prch,
+.orin {
   border: 2px solid #686868;
   background: #fff;
   color: #333;
 }
+
 /* ==================================================
- [05] SNS
+  [05] SNS
 ================================================== */
 /* SNS */
 .sns-wrap {
@@ -106,13 +111,15 @@ body {
 .sns-dropdown.show {
   display: flex;
 }
+
 .sns-dropdown img {
   width: 32px;
   height: 32px;
   object-fit: contain;
 }
+
 /* ==================================================
- [06] PC 메뉴 영역
+  [06] PC 메뉴 영역
 ================================================== */
 .nav-bottoms {
   width: 100%;
@@ -154,7 +161,7 @@ body {
 }
 
 /* ==================================================
- [07] mega-all 최종
+  [07] mega-all 최종
 ================================================== */
 .mega-all {
   width: 1188px;
@@ -232,7 +239,7 @@ body {
 
 
 /* ==================================================
- [08] hamburger menu
+  [08] hamburger menu
 ================================================== */
 /* 햄버거 (모바일용) */
 .hamburger {
@@ -259,13 +266,15 @@ body {
 .hamburger img {
   width: 30px;
 }
+
 /* ==================================================
  [09]SIDE MENU 
 ================================================== */
 .side-menu {
   position: fixed;
   top: 0;
-  right: -280px; /* 처음엔 숨김 */
+  right: -280px;
+  /* 처음엔 숨김 */
   width: 280px;
   height: 100vh;
   padding: 60px 30px 40px;
@@ -299,11 +308,11 @@ body {
   margin: 60px 0 0;
 }
 
-.siders > li {
+.siders>li {
   margin-bottom: 24px;
 }
 
-.siders > li > a {
+.siders>li>a {
   display: block;
   font-weight: 700;
   color: #333;
@@ -316,11 +325,11 @@ body {
   list-style: none;
   padding-left: 15px;
   margin-top: 10px;
-  border-left: 2px solid rgba(251,154,17,0.4);
+  border-left: 2px solid rgba(251, 154, 17, 0.4);
   display: none;
 }
 
-.siders li.active > .sub-menu {
+.siders li.active>.sub-menu {
   display: block;
 }
 
@@ -334,8 +343,9 @@ body {
 .siders>li>a:hover {
   color: #F69999;
 }
+
 /* ==================================================
- [10] sub menu
+  [10] sub menu
 ================================================== */
 
 .sub-menu {
@@ -425,9 +435,10 @@ body {
     width: 50px;
     height: 50px;
   }
- .sns-dropdown {
- right: -20%;
-}
+
+  .sns-dropdown {
+    right: -20%;
+  }
 }
 
 /* 375px 이하 */

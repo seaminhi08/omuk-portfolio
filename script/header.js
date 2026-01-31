@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
   /* ===============================
-     SNS 드롭다운
+      SNS 드롭다운
   =============================== */
   const snsLink = document.querySelector(".sns-link");
   const snsDropdown = document.querySelector(".sns-dropdown");

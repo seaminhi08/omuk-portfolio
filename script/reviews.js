@@ -40,7 +40,7 @@ modals.forEach(modal => {
     });
 });
 /*==============================================================
-               닫기 모달
+                닫기 모달
 =============================================================== */
 // 닫기 버튼 클릭
 document.querySelectorAll('.modal-close').forEach(btn => {
@@ -94,23 +94,23 @@ function generateQR() {
 =============================================================== */
 
 function closeModal(id) {
-  document.getElementById(id).style.display = 'none';
+    document.getElementById(id).style.display = 'none';
 }
 
 // 바깥 클릭 시 닫기
 document.querySelectorAll('.modal').forEach(modal => {
-  modal.addEventListener('click', e => {
-    if (e.target === modal) modal.style.display = 'none';
-  });
+    modal.addEventListener('click', e => {
+        if (e.target === modal) modal.style.display = 'none';
+    });
 });
 
 // ESC 키로 닫기
 document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') {
-    document.querySelectorAll('.modal').forEach(m => {
-      m.style.display = 'none';
-    });
-  }
+    if (e.key === 'Escape') {
+        document.querySelectorAll('.modal').forEach(m => {
+            m.style.display = 'none';
+        });
+    }
 });
 
 

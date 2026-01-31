@@ -36,19 +36,19 @@ function searchRecipe(event) {
 ======================================================== */
 const slides = [
     {
-        img:"../img2/fishs-img1(14).png",   
+        img:"img2/fishs-img1(14).png",   
         time: "20분",
         title: "매운 볶음 요리",
         tags: "#3無어묵# 우리가 아는 그맛!"
     },
     {
-        img:"../img2/fishs-img1(20).png",  
+        img:"img2/fishs-img1(20).png",  
         time: "15분",
         title: "🌶️🔥 매운 어묵우동",
         tags: "#초간단 #청양고추 #속풀리는"
     },
     {
-        img: "../img2/fishs-img1(21).png",  
+        img: "img2/fishs-img1(21).png",  
         time: "30분",
         title: "마라 어묵탕",
         tags: "#따뜻한요리 #중식풍 국물"

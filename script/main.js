@@ -165,17 +165,17 @@ document.addEventListener("DOMContentLoaded", () => {
     // ==============================
     const foods = [
         {
-            img: "../img2/main-food1.png",
+            img: "img2/main-food1.png",
             title: "양파크림 떡볶이",
             subtitle: "오묵의 비법 소스로 만든 우리 쌀"
         },
         {
-            img: "../img2/main-poodimg1-2.png",
+            img: "img2/main-poodimg1-2.png",
             title: "마라 떡볶이",
             subtitle: "얼얼한 마라 소스의 깊은 맛"
         },
         {
-            img: "../img2/main-poodimg1-3.png",
+            img: "img2/main-poodimg1-3.png",
             title: "로제 떡볶이",
             subtitle: "부드러운 로제의 만남"
         }

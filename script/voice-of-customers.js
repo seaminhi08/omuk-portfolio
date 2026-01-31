@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.body.style.overflow = '';
     };
 //////////////////////////////////////////반복문
-   form.addEventListener('submit', function (e) {
+    form.addEventListener('submit', function (e) {
     e.preventDefault();
 
     let valid = true;
