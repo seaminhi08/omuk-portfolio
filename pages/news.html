@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오마뎅 조합</title>
+    <link rel="icon" href="../img2/om-logo-1.png" type="image/png">
+
+    <!-- CSS -->
+    <link href="../css/base/reset.css" rel="stylesheet">
+    <link href="../css/base/header.css" rel="stylesheet">
+    <link href="../css/base/news.css" rel="stylesheet">
+    <link href="../css/base/footer.css" rel="stylesheet">
+
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../script/news.js" defer></script>
+    <script src="../script/header.js" defer></script>
+
+</head>
+
+
+<body>
+    <!-- ================================================================
+                                    [01] HEADER
+        ================================================================= -->
+    <header class="header">
+        <div class="header-inner">
+
+            <!-- 로고 -->
+            <h1 class="logo">
+                <a href="index.html">
+                    <img src="../img2/om-logo-1.png" alt="오묵 로고">
+                </a>
+            </h1>
+
+            <!-- 오른쪽 그룹 -->
+            <div class="right-group">
+
+                <!-- 오묵 PPT -->
+                <a href="https://www.miricanvas.com/v2/design2/9b0dc62e-7eb6-4a83-b3d8-851f4ca7665c" class="orin">
+                    <img src="../img/shopping-bag.png" alt="">
+                    PPT
+                </a>
+
+                <!-- 오묵 PIFMA -->
+                <a href="https://www.figma.com/design/GRjivl9yfpeURTzNXigGf2/%EC%98%A4%EB%AC%B5?node-id=0-1&p=f&t=UuXYGtyz9Sz3t84m-0"
+                    class="prch">
+                    <img src="../img/shopping-bag.png" alt="">
+                    FIGMA
+                </a>
+
+                <!-- SNS -->
+                <div class="sns-wrap">
+                    <a href="#" class="sns-link">
+                        <img src="../img/instagram.png" alt="인스타그램" class="insta">
+                    </a>
+
+                    <div class="sns-dropdown">
+                        <a href="https://www.instagram.com/" target="_blank">
+                            <img src="../img/instagram-imgs.png" class="icon-base">
+                        </a>
+                        <a href="https://naver.com" target="_blank">
+                            <img src="../img/naver-icon.png" class="icon-base">
+                        </a>
+                        <a href="https://youtube.com" target="_blank">
+                            <img src="../img/youtube-icon.png" class="icon-base">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 햄버거 -->
+                <div class="hamburger">
+                    <a href="#" id="menu-toggle">
+                        <img src="../img/align-justify.png" alt="메뉴 아이콘">
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+
+    <!-- ================= NAV ================= -->
+    <nav class="nav-bottoms">
+        <ul class="main-menu">
+
+            <li>
+                <a href="#">브랜드</a>
+                <ul class="sub-menu">
+                    <li><a href="story.html">오묵 이야기</a></li>
+                    <li><a href="recipes.html">오묵 레시피</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">메뉴소개</a>
+                <ul class="sub-menu">
+                    <li><a href="menu.html">통합 메뉴</a></li>
+                    <li><a href="recipes.html">레시피</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#" class="menu-3">매장</a>
+                <ul class="sub-menu">
+                    <li><a href="location.html">매장찾기</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#" class="menu-4">소식</a>
+                <ul class="sub-menu">
+                    <li><a href="story.html">오묵소식</a></li>
+                    <li><a href="reviews.html">이벤트</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">고객의소리</a>
+                <ul class="sub-menu">
+                    <li><a href="voice-of-customers.html">FAQ</a></li>
+                </ul>
+            </li>
+
+        </ul>
+
+        <!-- mega-all -->
+        <div class="mega-all">
+            <div class="col">
+                <ul>
+                    <li><a href="story.html">어묵소개</a></li>
+                    <li><a href="location.html">위치</a></li>
+                </ul>
+            </div>
+
+            <div class="col">
+                <ul>
+                    <li><a href="menu.html">통합 메뉴</a></li>
+                    <li><a href="recipes.html">레시피</a></li>
+                </ul>
+            </div>
+
+            <div class="col">
+                <ul>
+                    <li><a href="location.html">매장찾기</a></li>
+                </ul>
+            </div>
+
+            <div class="col">
+                <ul>
+                    <li><a href="news.html">오묵 News</a></li>
+                    <li><a href="reviews.html">이벤트</a></li>
+                </ul>
+            </div>
+
+            <div class="col">
+                <ul>
+                    <li><a href="voice-of-customers.html">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- ================= SIDE MENU ================= -->
+    <div class="side-menu" id="side-menu">
+
+        <!-- 닫기 버튼 (항상 ul 바깥!) -->
+        <a href="#" class="close-btn" id="close-menu">×</a>
+
+        <ul class="siders">
+
+            <li class="has-sub">
+                <a href="#">브랜드</a>
+                <ul class="sub-menu">
+                    <li><a href="story.html">어묵소개</a></li>
+                    <li><a href="location.html">위치</a></li>
+                </ul>
+            </li>
+
+            <li class="has-sub">
+                <a href="#">메뉴소개</a>
+                <ul class="sub-menu">
+                    <li><a href="menu.html">통합 메뉴</a></li>
+                    <li><a href="recipes.html">레시피</a></li>
+                </ul>
+            </li>
+
+            <li class="has-sub">
+                <a href="#">매장</a>
+                <ul class="sub-menu">
+                    <li><a href="location.html">매장찾기</a></li>
+                </ul>
+            </li>
+
+            <li class="has-sub">
+                <a href="#">소식</a>
+                <ul class="sub-menu">
+                    <li><a href="news.html">오묵 News</a></li>
+                </ul>
+            </li>
+
+            <li class="has-sub">
+                <a href="#">고객센터</a>
+                <ul class="sub-menu">
+                    <li><a href="voice-of-customers.html">FAQ</a></li>
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+
+    <!-- ================================================================
+                                    [02] story
+        ================================================================= -->
+    <!--story-->
+    <main class="story-content">
+        <div class="page-title">
+            <img src="../img/news-img.png" alt="어묵의 비밀 배너">
+        </div>
+        </section>
+
+        <!-- ================================================================
+                                    [03] highlights 3
+        ================================================================= -->
+
+        <div class="carousel">
+            <div class="carousel-track">
+                <div class="card active">
+                    <img src="../img2/news-imgss1.jpg">
+                </div>
+                <div class="card">
+                    <img src="../img2/news-imgss2.jpg">
+                </div>
+                <div class="card">
+                    <img src="../img2/news-imgss3.jpg">
+                </div>
+            </div>
+        </div>
+
+        <!-- ================================================================
+                                    [04] 2025 news
+        ================================================================= -->
+
+        <section>
+            <div class="news-top">
+                <h2 class="news-ss">2026년 뉴스</h2>
+
+                <div class="news-search-wrap">
+                    <div class="search-category">
+                        <label for="searchType">제목</label>
+                        <select id="searchType">
+                            <option value="title">제목</option>
+                            <option value="content">내용</option>
+                            <option value="writer">작성자</option>
+                        </select>
+                    </div>
+
+                    <div class="search-input">
+                        <input type="text" placeholder="검색어를 입력하세요">
+                        <span class="search-icon">🔍</span>
+                    </div>
+                </div>
+
+
+                <!-- ✅ 뉴스 1 -->
+                <div class="news-title1-left">
+                    <div class="news-header">
+                        <p class="news-category">[고객이 증명한 맛]</p>
+                        <a href="http://www.naver.com" class="click-go-button1">클릭 GO!</a>
+                    </div>
+                    <hr class="short-divider">
+                    <h2 class="news-main-title">후기 만족도 평균 4.5점! 다시 찾게 되는 이유가 있습니다</h2>
+                    <p class="news-subtitle">
+                        “국물부터 다르다”, “어묵이 이렇게 깔끔할 수 있냐”
+                        실제 고객 리뷰로 증명된 오묵의 맛과 품질.
+                    </p>
+                    <hr class="long-divider">
+                </div>
+
+                <!-- ✅ 뉴스 2 -->
+                <div class="news-title1-left">
+                    <div class="news-header">
+                        <p class="news-category">[결과로 말하는 경쟁력]</p>
+                        <a href="http://www.naver.com" class="click-go-button2">클릭 GO!</a>
+                    </div>
+                    <hr class="short-divider">
+                    <h2 class="news-main-title">이름 가리고 먹어도 선택은 오묵, 블라인드 테스트 1위</h2>
+                    <p class="news-subtitle">
+                        브랜드를 숨기고 진행한 블라인드 테스트에서도 1위.
+                        맛 자체로 선택받은 어묵, 이유가 분명합니다.
+                    </p>
+                    <hr class="long-divider">
+                </div>
+                <!-- ✅ 뉴스 3 -->
+                <div class="news-title1-left">
+                    <div class="news-header">
+                        <p class="news-category">[요즘 사람들이 찾는 이유]</p>
+                        <a href="http://www.naver.com" class="click-go-button3">클릭 GO!</a>
+                    </div>
+                    <hr class="short-divider">
+                    <h2 class="news-main-title">입소문으로 찾아오는 브랜드, 요즘 어묵은 오묵</h2>
+                    <p class="news-subtitle">
+                        광고보다 빠른 건 사람들의 추천.
+                        “한 번 먹으면 또 찾게 된다”는 말이 자연스럽게 나오는 이유.
+                    </p>
+                    <hr class="long-divider">
+                </div>
+        </section>
+
+
+        <!-- ================================================================
+                                    [05] FOOTER
+        ================================================================= -->
+        <footer class="footer-buttom">
+            <div class="footer-inner">
+
+                <div class="img-footer">
+                    <img src="../img2/om-logo-1.png">
+                </div>
+
+                <div class="footer-info">
+                    <p class="footer-left">
+                        강남점 매장 정보<br>
+                        서울시 강남구 학동로 137-6 엠빌딩 1층 <br>
+                        강남역 도보 5분 거리<br>
+                        1572-2965
+                    </p>
+                </div>
+
+                <div class="footer-right">
+                    <p>
+                        ⓒ 2025 오묵<br>
+                        [인스타그램][카카오톡 채널]<br>
+                        고객센터 1572-2965<br>
+                        [이용약관][개인정보처리방침]
+                    </p>
+                    <p class="tba"> ※ All images are licensed assets.<br>
+                        본 프로젝트에 사용된 이미지는 정식 라이선스를 구매하여 사용하였습니다.<br>
+                    </p>
+                </div>
+
+            </div>
+        </footer>
+
+</body>
+
+</html>

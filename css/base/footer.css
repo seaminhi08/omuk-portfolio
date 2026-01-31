@@ -1,0 +1,143 @@
+/* ============================
+  1) 푸터 전체 FULL 배경
+============================ */
+footer {
+  width: 100%;
+  background-color: #b4904c;
+  color: #333;
+  padding: 40px 0;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+/* ============================
+  2) 가운데 정렬 메인 컨테이너
+============================ */
+.footer-inner {
+  max-width: 1188px;
+  margin: 0 auto;
+  padding: 0 24px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+
+/* ============================
+  3) 왼쪽 로고
+============================ */
+.img-footer img {
+  width: 122px;
+  height: 94px;
+  display: block;
+}
+
+
+/* ============================
+  4) 가운데 텍스트
+============================ */
+.footer-info {
+  flex: 1;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  white-space: nowrap;
+}
+
+
+/* ============================
+  5) 오른쪽 텍스트
+============================ */
+.footer-right {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  white-space: nowrap;
+  padding: 0 30px;
+  /* ← 드디어 자연스럽게 적용됨! */
+}
+
+/* ============================
+6) 태블릿 (1024 이하)
+============================ */
+@media (max-width: 1024px) {
+  .tba {
+    padding-top: 10px;
+  }
+}
+
+/* ============================
+7) 태블릿 (768 이하)
+============================ */
+@media (max-width: 768px) {
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .img-footer img {
+    margin: 0 auto;
+  }
+
+  .footer-info {
+    white-space: normal;
+    margin: 0 20px;
+    text-align: center;
+  }
+
+  .footer-right {
+    white-space: normal;
+    padding: 0 30px;
+    text-align: center;
+  }
+
+  .tba {
+    padding-top: 10px;
+  }
+}
+
+
+/* ============================
+8) 모바일 480 이하
+============================ */
+@media (max-width: 480px) {
+
+  .footer-info {
+    margin: 0 20px;
+  }
+
+  .footer-right {
+    padding: 0 20px;
+  }
+
+  .tba {
+    padding-top: 10px;
+  }
+}
+
+
+/* ============================
+9) 모바일 375 이하
+============================ */
+@media (max-width: 375px) {
+
+  .footer-info {
+    margin: 0 15px;
+  }
+
+  .footer-right {
+    padding: 0 15px;
+  }
+
+  p {
+    margin-top: 5%;
+    font-size: 0.6rem;
+  }
+
+  .tba {
+    padding-top: 10px;
+  }
+}

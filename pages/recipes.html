@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>omak-조합</title>
+    <link rel="icon" href="../img2/om-logo-1.png" type="image/png">
+    <!-- CSS -->
+    <link href="../css/base/reset.css" rel="stylesheet">
+    <link href="../css/base/header.css" rel="stylesheet">
+    <link href="../css/base/recipes.css" rel="stylesheet">
+    <link href="../css/base/footer.css" rel="stylesheet">
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../script/recipes.js" defer></script>
+    <script src="../script/header-1.js" defer></script>
+
+
+</head>
+
+
+
+<body>
+    <!-- ================================================================
+                                    [01] HEADER
+        ================================================================= -->
+    <header class="header">
+        <div class="header-inner">
+
+            <!-- 로고 -->
+            <h1 class="logo">
+                <a href="index.html">
+                    <img src="../img2/om-logo-1.png" alt="오묵 로고">
+                </a>
+            </h1>
+
+            <!-- 오른쪽 그룹 -->
+            <div class="right-group">
+
+                <!-- 오묵 PPT -->
+                <a href="https://www.miricanvas.com/v2/design2/9b0dc62e-7eb6-4a83-b3d8-851f4ca7665c" class="orin">
+                    <img src="../img/shopping-bag.png" alt="">
+                    PPT
+                </a>
+
+                <!-- 오묵 PIFMA -->
+                <a href="https://www.figma.com/design/GRjivl9yfpeURTzNXigGf2/%EC%98%A4%EB%AC%B5?node-id=0-1&p=f&t=UuXYGtyz9Sz3t84m-0"
+                    class="prch">
+                    <img src="../img/shopping-bag.png" alt="">
+                    FIGMA
+                </a>
+
+                <!-- SNS -->
+                <div class="sns-wrap">
+                    <a href="#" class="sns-link">
+                        <img src="../img/instagram.png" alt="인스타그램" class="insta">
+                    </a>
+
+                    <div class="sns-dropdown">
+                        <a href="https://www.instagram.com/" target="_blank">
+                            <img src="../img/instagram-imgs.png" class="icon-base">
+                        </a>
+                        <a href="https://naver.com" target="_blank">
+                            <img src="../img/naver-icon.png" class="icon-base">
+                        </a>
+                        <a href="https://youtube.com" target="_blank">
+                            <img src="../img/youtube-icon.png" class="icon-base">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 햄버거 -->
+                <div class="hamburger">
+                    <a href="#" id="menu-toggle">
+                        <img src="../img/align-justify.png" alt="메뉴 아이콘">
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+
+    <!-- ================= NAV ================= -->
+    <nav class="nav-bottoms">
+        <ul class="main-menu">
+
+            <li>
+                <a href="#">브랜드</a>
+                <ul class="sub-menu">
+                    <li><a href="story.html">오묵 이야기</a></li>
+                    <li><a href="recipes.html">오묵 레시피</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">메뉴소개</a>
+                <ul class="sub-menu">
+                    <li><a href="menu.html">통합 메뉴</a></li>
+                    <li><a href="recipes.html">레시피</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#" class="menu-3">매장</a>
+                <ul class="sub-menu">
+                    <li><a href="location.html">매장찾기</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#" class="menu-4">소식</a>
+                <ul class="sub-menu">
+                    <li><a href="story.html">오묵소식</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">고객의소리</a>
+                <ul class="sub-menu">
+                    <li><a href="voice-of-customers.html">FAQ</a></li>
+                </ul>
+            </li>
+
+        </ul>
+
+        <!-- mega-all -->
+        <div class="mega-all">
+            <div class="col">
+                <ul>
+                    <li><a href="story.html">어묵소개</a></li>
+                    <li><a href="location.html">위치</a></li>
+                </ul>
+            </div>
+
+            <div class="col">
+                <ul>
+                    <li><a href="menu.html">통합 메뉴</a></li>
+                    <li><a href="recipes.html">레시피</a></li>
+                </ul>
+            </div>
+
+            <div class="col">
+                <ul>
+                    <li><a href="location.html">매장찾기</a></li>
+                </ul>
+            </div>
+
+            <div class="col">
+                <ul>
+                    <li><a href="news.html">오묵 News</a></li>
+                    <li><a href="reviews.html">이벤트</a></li>
+                </ul>
+            </div>
+
+            <div class="col">
+                <ul>
+                    <li><a href="voice-of-customers.html">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- ================= SIDE MENU ================= -->
+    <div class="side-menu" id="side-menu">
+
+        <!-- 닫기 버튼 (항상 ul 바깥!) -->
+        <a href="#" class="close-btn" id="close-menu">×</a>
+
+        <ul class="siders">
+
+            <li class="has-sub">
+                <a href="#">브랜드</a>
+                <ul class="sub-menu">
+                    <li><a href="story.html">어묵소개</a></li>
+                    <li><a href="location.html">위치</a></li>
+                </ul>
+            </li>
+
+            <li class="has-sub">
+                <a href="#">메뉴소개</a>
+                <ul class="sub-menu">
+                    <li><a href="menu.html">통합 메뉴</a></li>
+                    <li><a href="recipes.html">레시피</a></li>
+                </ul>
+            </li>
+
+            <li class="has-sub">
+                <a href="#">매장</a>
+                <ul class="sub-menu">
+                    <li><a href="location.html">매장찾기</a></li>
+                </ul>
+            </li>
+
+            <li class="has-sub">
+                <a href="#">소식</a>
+                <ul class="sub-menu">
+                    <li><a href="news.html">오묵 News</a></li>
+                    <li><a href="reviews.html">이벤트</a></li>
+                </ul>
+            </li>
+
+            <li class="has-sub">
+                <a href="#">고객센터</a>
+                <ul class="sub-menu">
+                    <li><a href="voice-of-customers.html">FAQ</a></li>
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+
+    <!-- ================================================================
+                                    [02] recipe-section <Best3>
+        ================================================================= -->
+    <main class="story-content">
+
+        <div class="page-title">
+            <img src="../img/recipe-img.png" alt="어묵의 비밀 배너">
+        </div>
+        </section>
+        <!-- ================================================================
+                                    [03] recipe-section <Best3>
+        ================================================================= -->
+        <section class="recipe-section">
+
+            <!-- 🔶 상단 제목 + 검색 영역 -->
+            <div class="news-top">
+                <h2 class="recipe-title">레시피 BEST3</h2>
+
+                <div class="twin-search-wrapper">
+
+                    <form class="recipe-search-form" onsubmit="searchRecipe(event)">
+
+                        <div class="search-field">
+                            <select class="search-category">
+                                <option value="title">제목</option>
+                                <option value="content">내용</option>
+                            </select>
+                        </div>
+
+                        <div class="search-field keyword-input-wrapper">
+                            <input type="text" placeholder="검색어 입력" class="search-input">
+                            <button type="submit" class="search-button">
+                                🔍
+                            </button>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+            <!-- ================================================================
+                                    [04] 🔶 레시피 BEST3 리스트
+        ================================================================= -->
+            <!--  -->
+            <div class="recipe-list">
+
+                <!-- 1번 -->
+                <div class="recipe-item">
+                    <div class="recipe-img-wrap">
+                        <div class="rank-circle">1</div>
+                        <img src="../img2/fishs-img1(12).png" alt="">
+                    </div>
+
+                    <div class="recipe-info">
+                        <div class="time-box">
+                            ⏱ <span>30분</span>
+                        </div>
+                        <h3>3無으로 만든 짜장밥</h3>
+                        <p class="tag"># 초간단 #아이반찬 #집밥레시피</p>
+                    </div>
+                </div>
+
+                <!-- 2번 -->
+                <div class="recipe-item">
+                    <div class="recipe-img-wrap">
+                        <div class="rank-circle">2</div>
+                        <img src="../img2/fishs-img1(5).png" alt="">
+                    </div>
+
+                    <div class="recipe-info">
+                        <div class="time-box">
+                            ⏱ <span>15분</span>
+                        </div>
+                        <h3> 매운맛 레벨 🌶️🌶️🌶️
+                            해장할땐 매운걸로 스트레스풀땐
+                        </h3>
+                        <p class="tag">#스트레스해소 #매콤달콤 #야식추천 #분식맛집</p>
+                    </div>
+                </div>
+
+                <!-- 3번 -->
+                <div class="recipe-item">
+                    <div class="recipe-img-wrap">
+                        <div class="rank-circle">3</div>
+                        <img src="../img2/fishs-img1(4).png" alt="">
+                    </div>
+
+                    <div class="recipe-info">
+                        <div class="time-box">
+                            ⏱ <span>30분</span>
+                        </div>
+                        <h3>깊고 시원한 육수!
+                            온 가족 든든 어묵</h3>
+                        <p class="tag">#오늘의국물 #캠핑필수템 #겨울최애
+                            #술안주강추 #육수비밀</p>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </section>
+        <!-- ================================================================
+                                    [05] Recipe Slide
+        ================================================================= -->
+        <!------------------레시피 슬라이드------------------>
+        <section class="recipe-detail">
+
+            <h2 class="category-tag">매운어묵요리</h2>
+
+            <div class="detail-wrapper">
+
+                <!-- 왼쪽 버튼 -->
+                <button class="arrow-btn-left" id="prevBtn">❮</button>
+
+                <!-- ⭐ 이미지 + 텍스트가 동시에 바뀌는 박스 -->
+                <div class="slide-box">
+
+                    <!-- 👇 이미지(바뀜) -->
+                    <div class="slide-img">
+                        <img id="slideImage" src="../img2/fishs-img1(5).png" alt="">
+                    </div>
+
+                    <!-- 👇 텍스트(바뀜) -->
+                    <div class="slide-info">
+                        <div class="time" id="slideTime">20분</div>
+                        <h3 id="slideTitle">매운 볶음 요리</h3>
+                        <p id="slideTags">#3無어묵# 우리가 아는 그맛!
+                            #쫄깃쫄깃#얼큰함</p>
+                    </div>
+
+                </div>
+
+                <!-- 오른쪽 버튼 -->
+                <button class="arrow-btn-right" id="nextBtn">❯</button>
+
+            </div>
+
+            <!-- 아래 점 -->
+            <div class="dots-wrapper" id="dotsWrapper"></div>
+
+        </section>
+
+
+
+        <!-- ================================================================
+                                    [06] FOOTER
+        ================================================================= -->
+        <footer class="footer-buttom">
+            <div class="footer-inner">
+
+                <div class="img-footer">
+                    <img src="../img2/om-logo-1.png">
+                </div>
+
+                <div class="footer-info">
+                    <p class="footer-left">
+                        강남점 매장 정보<br>
+                        서울시 강남구 학동로 137-6 엠빌딩 1층 <br>
+                        강남역 도보 5분 거리<br>
+                        1572-2965
+                    </p>
+                </div>
+
+                <div class="footer-right">
+                    <p>
+                        ⓒ 2025 오묵<br>
+                        [인스타그램][카카오톡 채널]<br>
+                        고객센터 1572-2965<br>
+                        [이용약관][개인정보처리방침]
+                    </p>
+                    <p class="tba"> ※ All images are licensed assets.<br>
+                        본 프로젝트에 사용된 이미지는 정식 라이선스를 구매하여 사용하였습니다.<br>
+                    </p>
+                </div>
+
+            </div>
+        </footer>
+
+</body>
+
+</html>

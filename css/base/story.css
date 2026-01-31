@@ -1,0 +1,323 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  /* 가로 스크롤 방지 */
+}
+
+/* ==================================================
+ [02]story
+================================================== */
+
+/*======== 중앙 콘텐츠 컨테이너 ========*/
+.story-content {
+  flex: 1;
+  /* ✅ 콘텐츠 영역이 푸터 위를 차지하게 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* 1. 상단 타이틀 */
+.page-title {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  background: url("../../img/story-img.png") center / cover no-repeat;
+  overflow: hidden;
+}
+
+.page-title img {
+  display: none;
+}
+/* ==================================================
+      [03] nav-button
+================================================== */
+/* 2. 네비게이션 버튼 */
+.story-nav {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  z-index: 10;
+  transform: translateY(-3vw);
+}
+
+.story-nav>.nav-button {
+  padding: 2rem 6rem;
+  font-size: 0.95rem;
+  border: 0.1rem solid transparent;
+  color: #444;
+  background-color: rgba(255, 195, 83, 0.7);
+  border-radius: 0.6rem;
+  font-weight: bold;
+  transition: background 0.2s, color 0.2s;
+}
+
+.nav-button.active {
+  background-color: #c4a97a;
+  color: #fff;
+}
+
+/*===============================*/
+/* 3. 반투명 텍스트 박스 */
+.text-box {
+  background-color: rgba(40, 30, 20, 0.6);
+  color: #fff;
+  border-radius: 1vw;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  width: 53%;
+  padding: 4vw 3vw;
+  margin-bottom: 2vw;
+  box-sizing: border-box;
+}
+
+.text-box h2 {
+  font-size: 2.4vw;
+  margin-bottom: 1.5vw;
+}
+
+.text-box p {
+  font-size: 1.2vw;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* ==================================================
+   [04] story-detail
+================================================== */
+.food-img6 {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+
+
+}
+
+/* 이미지 */
+.food-img6 img {
+  width: 100%;
+  height: auto;
+  /* 🔥 자연 비율 유지 */
+  display: block;
+}
+
+/* 반투명 박스 */
+.food-img6 .text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: clamp(80px, 30vw, 300px) 2vw;
+  background-color: rgba(40, 30, 20, 0.6);
+  color: #fff;
+  border-radius: 1rem;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.food-img6 .text-box h2 {
+  font-size: 3rem;
+
+}
+
+.food-img6 .text-box p {
+  font-size: 2rem;
+  line-height: 1.7;
+}
+/* ==================================================
+    [05]  메뉴 섹션
+================================================== */
+.image-container {
+  position: relative;
+  width: 65%;
+
+  height: auto;
+}
+
+/* 왼쪽 아래 구석 배치 */
+.menu-link-button {
+  position: absolute;
+  left: clamp(200px, 40vw, 74%);
+  bottom: clamp(35px, 20vw, 321px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  padding: 32px 141px;
+  background-color: #c4a97a;
+  border-radius: 50px;
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  width: fit-content;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background-image: url(../../img/food7.png);
+  background-repeat: no-repeat;
+  background-size: 48px 48px;
+  background-position: right 18px center;
+}
+
+/*===============================
+          반응형
+/*  =======================*/
+
+/* 1024px 이하 */
+@media (max-width: 1024px) {
+  .food-img6 img {
+    margin-top: -8.5%;
+  }
+
+  .food-img6 .text-box {
+    width: 64%;
+    top: 45%;
+    padding: 19% 2%;
+  }
+
+  .food-img6 .text-box h2 {
+    font-size: 2.4rem;
+  }
+
+  .food-img6 .text-box p {
+    font-size: 1.4rem;
+  }
+
+  .image-container {
+    margin-top: -26%;
+  }
+
+  .menu-link-button {
+    left: clamp(148px, 30vw, 75%);
+    bottom: clamp(18px, 11vw, 124px);
+  }
+
+}
+
+/* 768px 이하 (태블릿) */
+@media (max-width: 768px) {
+  .food-img6 img {
+    margin-top: -11.5%;
+  }
+
+  .page-title {
+    height: 180px;
+  }
+
+  .text-box {
+    width: 90%;
+    padding: 3vw;
+  }
+
+  .image-container {
+    height: 26vw;
+  }
+
+  .image-container {
+    margin-top: -26%;
+  }
+
+  .menu-link-button {
+    margin-top: 25%;
+
+    background-size: 85px 85px;
+    background-position: 92% 56%;
+  }
+
+  .food-img6 .text-box {
+    width: 61%;
+    top: 38%;
+    padding: 19% 1.5%;
+  }
+
+    .menu-link-button {
+        left: clamp(148px, 25vw, 75%);
+        bottom: clamp(30px, 36vw, 282px);
+    }
+}
+
+/* 480px 이하 (모바일) */
+@media (max-width: 480px) {
+  .story-nav>.nav-button {
+    padding: 1rem 4rem;
+    font-size: 0.95rem;
+  }
+
+  .food-img6 .text-box {
+    width: 61%;
+    top: 50%;
+    padding: 19% 1.5%;
+  }
+
+  .food-img6 .text-box h2 {
+    font-size: 1.55rem;
+  }
+
+  .food-img6 .text-box p {
+    font-size: 1.1rem;
+  }
+
+  .page-title {
+    height: 140px;
+  }
+
+  .text-box {
+    width: 95%;
+    padding: 4vw 5vw;
+  }
+
+
+  .menu-link-button {
+    font-size: 1rem;
+    padding: 2vh 6vw;
+    margin-top: 18vw;
+    background-size: 40px 40px;
+    background-position: 79% 32%;
+    background-color: #b38b56;
+  }
+
+  .menu-link-button {
+    left: clamp(161px, 25vw, 75%);
+    bottom: clamp(30px, 14vw, 203px);
+  }
+}
+
+@media (max-width: 375px) {
+  .story-nav {
+
+    transform: translateY(-11vw);
+  }
+
+  .food-img6 img {
+    margin-top: -18.5%;
+  }
+
+  .story-nav>.nav-button {
+    padding: 0.8rem 2.5rem;
+    font-size: 0.9rem;
+  }
+
+
+
+  .food-img6 .text-box h2 {
+    font-size: 1.2rem;
+  }
+
+  .food-img6 .text-box p {
+    font-size: 0.7rem;
+  }
+
+  .menu-link-button {
+    left: clamp(120px, 33vw, 69%);
+    bottom: clamp(30px, 16vw, 203px);
+    padding: 1vh 5vw;
+  }
+}

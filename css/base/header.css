@@ -1,0 +1,478 @@
+/* ==================================================
+ [00]  기본 리셋
+================================================== */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+/* ==================================================
+ [01] HEADER
+================================================== */
+.header {
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+  z-index: 5000; /* nav_bottoms 보다 크게 */
+}
+
+.header-inner {
+  max-width: 1188px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 74px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: relative;
+  /* ⭐ 햄버거 absolute 기준 */
+}
+
+/* ==================================================
+ [02]Logo
+================================================== */
+.logo img {
+  width: 140px;
+  height: auto;
+}
+
+/* ==================================================
+ [03] 오른쪽 그룹
+================================================== */
+.right-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-shrink: 0;
+}
+/* ==================================================
+ [04] 온라인몰 & 프랜차이즈
+================================================== */
+
+.orin,
+.prch {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+  padding: 8px 16px;
+  border-radius: 30px;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+
+.prch ,.orin{
+  border: 2px solid #686868;
+  background: #fff;
+  color: #333;
+}
+/* ==================================================
+ [05] SNS
+================================================== */
+/* SNS */
+.sns-wrap {
+  position: relative;
+}
+
+.sns-link {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sns-dropdown {
+  position: absolute;
+  top: 115%;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  display: none;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 2000;
+}
+
+.sns-dropdown.show {
+  display: flex;
+}
+.sns-dropdown img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+/* ==================================================
+ [06] PC 메뉴 영역
+================================================== */
+.nav-bottoms {
+  width: 100%;
+  background: #F9F9F9;
+  border-top: 1px solid #ddd;
+
+  position: relative;
+  z-index: 50;
+}
+
+/* 메인 메뉴 (PC) */
+.main-menu {
+  width: 1188px;
+  margin: 0 auto;
+  padding: 0;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+
+  list-style: none;
+}
+
+
+
+.main-menu>li>a {
+  display: block;
+  padding: 18px 0;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.main-menu>li>a:hover {
+  color: #F69999;
+}
+
+/* ==================================================
+ [07] mega-all 최종
+================================================== */
+.mega-all {
+  width: 1188px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+  text-align: center;
+
+  gap: 0;
+
+  height: 0;
+  /* ⭐ 공간 제거 */
+  overflow: hidden;
+  /* ⭐ 내부 숨김 */
+  padding: 0;
+  /* 숨겨진 상태에서는 패딩 제거 */
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transform: translateY(10px);
+  transition: opacity .25s ease, transform .25s ease, height .25s ease;
+}
+
+/* hover시 보여짐 */
+.nav-bottoms:hover .mega-all {
+  height: auto;
+  /* ⭐ 실제 높이로 펼침 */
+  padding: 24px 0;
+  /* ⭐ 나타날 때 패딩 추가 */
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* 내부 구조 통일 */
+.mega-all .col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mega-all .col h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  white-space: nowrap;
+}
+
+.mega-all .col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mega-all .col ul li {
+  margin-bottom: 8px;
+}
+
+.mega-all .col ul li a {
+  font-size: 14px;
+  color: #555;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.mega-all .col ul li a:hover {
+  color: #F69999;
+}
+
+
+
+/* ==================================================
+ [08] hamburger menu
+================================================== */
+/* 햄버거 (모바일용) */
+.hamburger {
+  position: absolute;
+  right: -10px;
+  /* ❌ 현재 이 값 때문에 겹침 */
+
+  /* 아래처럼 변경 */
+  right: 20px;
+  /* ⭐ SNS 아이콘과 충분히 떨어짐 */
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 38px;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 1500;
+  /* SNS보다 항상 위 */
+}
+
+.hamburger img {
+  width: 30px;
+}
+/* ==================================================
+ [09]SIDE MENU 
+================================================== */
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -280px; /* 처음엔 숨김 */
+  width: 280px;
+  height: 100vh;
+  padding: 60px 30px 40px;
+  background: linear-gradient(180deg, #fffdf9 0%, #f9e8e8 100%);
+  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.15);
+  transition: right .4s ease;
+  z-index: 5000;
+  overflow-y: auto;
+}
+
+/* 열릴 때 */
+.side-menu.open {
+  right: 0;
+}
+
+/* 닫기 버튼 */
+.close-btn {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  font-size: 32px;
+  font-weight: 900;
+  color: #c94d4d;
+  cursor: pointer;
+}
+
+/* 리스트 기본 */
+.siders {
+  list-style: none;
+  padding: 0;
+  margin: 60px 0 0;
+}
+
+.siders > li {
+  margin-bottom: 24px;
+}
+
+.siders > li > a {
+  display: block;
+  font-weight: 700;
+  color: #333;
+  font-size: 1.15rem;
+  text-decoration: none;
+}
+
+/* 서브메뉴 */
+.sub-menu {
+  list-style: none;
+  padding-left: 15px;
+  margin-top: 10px;
+  border-left: 2px solid rgba(251,154,17,0.4);
+  display: none;
+}
+
+.siders li.active > .sub-menu {
+  display: block;
+}
+
+.sub-menu li a {
+  display: block;
+  padding: 6px 0 6px 8px;
+  font-size: .95rem;
+  color: #555;
+}
+
+.siders>li>a:hover {
+  color: #F69999;
+}
+/* ==================================================
+ [10] sub menu
+================================================== */
+
+.sub-menu {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 15px;
+  /* 들여쓰기 */
+  border-left: 2px solid rgba(251, 154, 17, 0.4);
+  display: none;
+  /* 기본 숨김 */
+  animation: slideDown .25s ease;
+}
+
+.sub-menu li a {
+  display: block;
+  padding: 6px 0 6px 8px;
+  font-size: .95rem;
+  color: #555;
+  text-decoration: none;
+  transition: color .2s;
+}
+
+.sub-menu li a:hover {
+  color: #fb9a11;
+}
+
+/* 2차 메뉴 열릴 때 */
+.siders li.active>.sub-menu {
+  display: block;
+}
+
+/* 메뉴 드롭다운 애니메이션 */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*********************************************/
+/* 반응형 */
+/* 1024px 이하 — 모바일 메뉴 활성 */
+@media (max-width: 1024px) {
+  .hamburger {
+    display: flex;
+  }
+
+  /* PC 메뉴 숨김 */
+  .main-menu,
+  .mega-all {
+    display: none !important;
+  }
+}
+
+/* 480px 이하 */
+@media (max-width: 480px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo img {
+    width: 80px;
+    margin: 0;
+    /* 음수 제거 */
+  }
+
+  .right-group {
+    display: flex;
+    gap: 10px;
+    padding: 0 10px;
+    transform: translateX(-20px);
+    /* ← 조절하면서 적당히 당기기 */
+  }
+
+  .hamburger {
+    right: -46px;
+  }
+
+  .hamburger img {
+    width: 50px;
+    height: 50px;
+  }
+ .sns-dropdown {
+ right: -20%;
+}
+}
+
+/* 375px 이하 */
+@media (max-width: 375px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo img {
+    width: 80px;
+    margin: 0;
+    /* 음수 제거 */
+  }
+
+  .right-group {
+    display: flex;
+    gap: 10px;
+    padding: 0 10px;
+    transform: translateX(-20px);
+    /* ← 조절하면서 적당히 당기기 */
+  }
+
+  .orin,
+  .prch {
+    padding: 4px 7px;
+  }
+
+  .sns-link {
+    width: 40px;
+    height: 40px;
+  }
+
+  .insta {
+    width: 30px;
+    height: 30px;
+  }
+
+  .hamburger {
+    right: -36px;
+  }
+
+  .hamburger img {
+    width: 40px;
+    height: 40px;
+  }
+}

@@ -1,0 +1,1049 @@
+/* ==================================================
+ [00] ✅ 기본 설정
+================================================== */
+body {
+  margin: 0;
+  overflow-x: hidden;
+  /* 가로 스크롤 완전 차단 */
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+/**************************************************
+기본 구조 / Story Section
+**************************************************/
+.story-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  background-color: #fff;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/**************************************************
+상단 타이틀
+**************************************************/
+.page-title {
+  width: 100%;
+  max-width: 1188px;
+  margin: 0 auto;
+  position: relative;
+  overflow: visible;
+}
+
+.page-title img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/**/
+/* 네비게이션 버튼 */
+.story-nav {
+  display: flex;
+  z-index: 10;
+  transform: translateY(-120px);
+  width: 50%;
+  height: 30px;
+  gap: 20px;
+}
+
+/*브랜드 이야기 매장위치 박스*/
+.nav-buttons {
+  color: #444;
+  background-color: #d3a662;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  /* 클릭 가능함을 표시 */
+  transition: background-color 0.3s, color 0.3s;
+  transform: translate(324px, -35px);
+  width: 50%;
+  height: 20%;
+  white-space: nowrap;
+  border-radius: 15px;
+  padding: 40px 176px;
+
+}
+
+.story-nav .nav-buttons .bt1 {
+  display: inline-block;
+  transform: translate(-69px, -15px);
+  font-size: 25px;
+}
+
+.story-nav .nav-buttons .bt2 {
+  display: inline-block;
+  transform: translate(-51px, -16px);
+  font-size: 25px;
+}
+
+/* 마우스를 올렸을 때 스타일 */
+.nav-buttons:hover {
+  background-color: #e89006;
+}
+
+
+
+/* 모든 버튼의 기본 스타일 (공통) */
+
+
+.nav-buttons {
+  padding: 45px 179px;
+  color: #444;
+  background-color: #d3a662;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  transform: translateX(-156px) translateY(-25px);
+}
+
+/* 마우스를 올렸을 때 스타일 */
+.nav-buttons:hover {
+  background-color: #90a048;
+}
+
+/* 마우스로 '누르고 있는' 순간의 스타일 */
+.nav-buttons:active {
+  background-color: #a98f62;
+  color: #e0e0e0;
+}
+
+.nav-button {
+  padding: 25px 40px;
+  color: #444;
+  background-color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+  border-right: 1px solid #ccc;
+  /* 오른쪽에 세로선 추가 */
+}
+
+/* 마지막 버튼의 오른쪽 테두리는 제거 */
+.nav-buttons:last-child {
+  border-right: none;
+}
+
+/* 네비게이션 버튼 */
+.story-nav {
+  display: flex;
+  z-index: 10;
+  transform: translateY(-120px);
+  width: 50%;
+  height: 30px;
+  gap: 20px;
+}
+
+/*브랜드 이야기 매장위치 박스*/
+.nav-buttons {
+  color: #444;
+  background-color: #d3a662;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  /* 클릭 가능함을 표시 */
+  transition: background-color 0.3s, color 0.3s;
+  transform: translate(324px, -35px);
+  width: 50%;
+  height: 20%;
+  white-space: nowrap;
+  border-radius: 15px;
+  padding: 40px 176px;
+
+}
+
+.story-nav .nav-buttons .bt1 {
+  display: inline-block;
+  transform: translate(-69px, -15px);
+  font-size: 25px;
+}
+
+.story-nav .nav-buttons .bt2 {
+  display: inline-block;
+  transform: translate(-51px, -16px);
+  font-size: 25px;
+}
+
+/* 마우스를 올렸을 때 스타일 */
+.nav-buttons:hover {
+  background-color: #e89006;
+}
+
+
+
+/* 모든 버튼의 기본 스타일 (공통) */
+
+
+.nav-buttons {
+  padding: 45px 179px;
+  color: #444;
+  background-color: #d3a662;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  transform: translateX(-156px) translateY(-25px);
+}
+
+/* 마우스를 올렸을 때 스타일 */
+.nav-buttons:hover {
+  background-color: #90a048;
+}
+
+/* 마우스로 '누르고 있는' 순간의 스타일 */
+.nav-buttons:active {
+  background-color: #a98f62;
+  color: #e0e0e0;
+}
+
+.nav-button {
+  padding: 25px 40px;
+  color: #444;
+  background-color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+  border-right: 1px solid #ccc;
+  /* 오른쪽에 세로선 추가 */
+}
+
+/* 마지막 버튼의 오른쪽 테두리는 제거 */
+.nav-buttons:last-child {
+  border-right: none;
+}
+
+/*복사하기*/
+
+/*********************************************************************************/
+
+.omd-news {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+  padding: 1px;
+}
+
+/* 💥 헤더와 검색창을 수평 배치하는 핵심 CSS 💥 */
+.news-header-wrapper {
+  display: flex;
+  align-items: center;
+  /* 세로 중앙 정렬 */
+  gap: 30px;
+  /* 헤더와 검색창 사이의 간격 */
+  background-color: #e0ac4e;
+  padding: 20px;
+}
+
+.omd-news h1 {
+
+  flex-shrink: 0;
+  font-size: 32px;
+  color: #4a382c;
+  margin: 0;
+
+}
+
+/*********************************************
+ 🔶 검색창 스타일 
+*********************************************/
+
+.twin-search-wrapper {
+  display: flex;
+  gap: 20px;
+  width: 90%;
+  max-width: 1000px;
+  margin: 30px auto;
+  justify-content: center;
+}
+
+.recipe-search-form {
+  flex-grow: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 15px;
+  margin: 0 -10%;
+}
+
+.search-category {
+  margin-left: 135px;
+}
+
+/* 카테고리 선택 박스 */
+.search-field {
+  flex-shrink: 0;
+  margin-right: 143px;
+  font-size: 1rem;
+  transform: translate(-1vw, 1%);
+}
+
+/* 제목 선택 박스 (정사각형 케이스 대비 가능) */
+.category-select {
+  padding: 6px 12px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+}
+
+/* 밑줄 스타일 */
+.keyword-input-wrapper {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 6px;
+}
+
+.search-input {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  padding: 4px 0;
+}
+
+/* 🔍 버튼 */
+.search-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 10px;
+  font-size: 1.25rem;
+  color: #444;
+}
+
+.search-button:hover {
+  color: #000;
+}
+
+
+
+.recipe-search-form-form-a {
+  margin-left: 80px;
+}
+
+
+/* ==================================================
+ [02] 🔶 recipe-section 
+================================================== */
+.recipe-section {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 40px 0;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 제목 */
+.recipe-title {
+  font-size: 32px;
+  font-weight: 800;
+  background: #2ecc71;
+  padding: 12px 24px;
+  display: inline-block;
+  color: #fff;
+  border-radius: 6px;
+  margin-bottom: 30px;
+  transform: translateX(40%);
+}
+
+/* 전체 레이아웃 */
+.news-top {
+  margin-bottom: 40px;
+}
+
+/* ==================================================
+ [03] 🔶 레시피 BEST3 리스트
+================================================== */
+/* 리스트 */
+.recipe-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  transform: translate(9%, 2px);
+}
+
+/* 레시피 1개 구조 */
+.recipe-item {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+
+  align-items: center;
+}
+
+/* 이미지 */
+.recipe-img-wrap {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  /* 🔥 이게 핵심 */
+}
+
+.recipe-img-wrap img {
+  width: 100%;
+  max-width: 350px;
+  margin: 0;
+}
+
+/* 랭킹 숫자 */
+.rank-circle {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+  width: 46px;
+  height: 46px;
+  background: #ff5252;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 오른쪽 정보 박스 */
+.recipe-info {
+  background: #fde6a7;
+  border: 1px solid #ebcf9c;
+  border-radius: 6px;
+  padding: 48px 29px;
+  margin: -17% 16%;
+  transform: translate(-20%, -1%);
+}
+
+.time-box {
+  background: #fff;
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 4px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.recipe-info h3 {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.tag {
+  background: #fff;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+  color: #2ecc71;
+  border: 1px solid #c4e9d9;
+}
+
+/* 버튼 */
+.btn-more {
+  display: inline-block;
+  margin-top: 40px;
+  background: #16a085;
+  color: #fff;
+  font-size: 18px;
+  padding: 14px 26px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+}
+/* ==================================================
+[04] Recipe Slide
+================================================== */
+.recipe-detail {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 40px 0;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.category-tag {
+  display: inline-block;
+  background: #2ecc71;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  transform: translateX(50%)
+}
+
+.detail-wrapper {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+.arrow-btn-left {
+  background: none;
+  border: none;
+  font-size: 36px;
+  cursor: pointer;
+  color: #333;
+
+}
+
+.arrow-btn-right {
+  position: absolute;
+  right: 10px;
+  /* 🔥 여기를 조절하면 됨 */
+  top: 50%;
+  transform: translateY(-50%);
+  /* 세로 가운데 정렬 */
+  font-size: 36px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+}
+
+.arrow-btn:hover {
+  color: #000;
+}
+
+/* 슬라이드 박스 */
+.slide-box {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  transform: translate(10%, 10px);
+}
+
+/* 이미지 */
+.slide-img {
+  width: 409px;
+  height: 350px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.slide-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 설명박스 */
+.slide-info {
+  border: 1px solid #d8d8d8;
+  padding: 114px;
+  border-radius: 10px;
+  margin: 0 3%;
+  transform: translate(-12%, 0%);
+}
+
+.slide-info .time {
+  background: #fff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-weight: 700;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.slide-info h3 {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.slide-info p {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* 기존 스타일 생략하고 dot만 추가 */
+
+.dots-wrapper {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ccc;
+  margin: 0 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dot.active {
+  background: #2ecc71;
+  /* 선택된 점 */
+}
+
+/*오디오 기능**/
+.dots-wrapper {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  border-radius: 50%;
+  background: #ccc;
+  margin: 0 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dot.active {
+  background: #2ecc71;
+  /* 현재 활성 dot */
+}
+
+
+/***************************1024px 반응형*********************************************/
+@media (max-width: 1024px) {
+
+  .news-ss {
+    text-align: justify;
+    position: relative;
+    left: 10vw;
+    top: 3vw;
+  }
+
+  .slide-info {
+    padding: 56px;
+    transform: translate(-13%, 0%)
+  }
+
+  .arrow-btn-left {
+    margin: 0 200%;
+  }
+
+  .arrow-btn-right {
+    right: 36px;
+  }
+
+}
+
+/***************************768**px 반응형*******************************************/
+@media (max-width: 768px) {
+
+  /*검색창*/
+  .recipe-search-form-form-a {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 0 20px;
+    margin-left: 17vw;
+  }
+
+  .recipe-search-form-form-a {
+    position: relative;
+    left: 10%;
+    transform: translateX(20%);
+    margin-left: 0;
+    width: auto;
+  }
+
+  .category-select {
+    position: relative;
+    transform: translate(-2%, 1vw);
+  }
+
+  .search-icon {
+    margin: 0 30%;
+  }
+
+  .twin-search-wrapper {
+    display: flex;
+    gap: 20px;
+    width: 70%;
+    max-width: 800px;
+    margin: 30px auto;
+    justify-content: center;
+  }
+
+  .search-input {
+    font-size: 1.1rem;
+    border-radius: 0 10px 10px 0;
+  }
+
+  .news-category {
+    white-space: nowrap;
+  }
+
+  .keyword-input-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 6px;
+    margin-right: 66px;
+    /*두줄 간격*/
+
+  }
+
+  /*-----------------------레시피----------------------*/
+
+  .slide-img {
+    transform: translateX(-15%);
+  }
+
+  .slide-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* 텍스트 박스 */
+  .slide-info {
+    width: 58%;
+    margin: 20px auto 0;
+
+  }
+
+
+
+
+
+
+}
+
+
+
+/**************************수정******************************************************/
+@media (max-width: 480px) {
+
+  /*검색창*/
+  .recipe-search-form-form-a {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 0 20px;
+    margin-left: 17vw;
+  }
+
+  .category-select {
+    position: relative;
+    /* 👈 transform 기준을 명확히 */
+    transform: translate(84%, 4vw);
+    z-index: 10;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .twin-search-wrapper {
+    flex-direction: column;
+    width: 95%;
+    max-width: 330px;
+    margin: 10px auto 20px;
+    gap: 8px;
+    /* 🔥 간격 줄임 */
+  }
+
+  .recipe-search-form {
+    width: 26%;
+    margin: 0;
+    /* 🔥 form 자체 여백 제거 */
+    padding: 0;
+    /* 🔥 여백 제거 */
+  }
+
+  .keyword-input-wrapper {
+    margin: 0;
+    /* 🔥 아래쪽 뜨는 여백 제거 */
+  }
+
+  .search-field {
+    margin-right: -128%;
+    /* 🔥 select 박스 간격 최소 */
+  }
+
+  .search-input {
+    font-size: 0.7rem;
+    border-radius: 0 10px 10px 0;
+  }
+
+  .news-category {
+    white-space: nowrap;
+  }
+
+  .keyword-input-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 6px;
+    width: 180px;
+    /* 🔥 줄 길이 고정 */
+    max-width: 180px;
+    margin-right: 58px;
+    /*두줄 간격*/
+    transform: translate(104%, 1vw);
+  }
+
+  /****************레시피************************/
+  .recipe-info {
+    padding: 35px 5px;
+    margin: -17% 16%;
+    transform: translate(-20%, -1%);
+
+  }
+
+  .recipe-img-wrap {
+    height: 180px;
+    /* 원하는 고정 높이 */
+    overflow: hidden;
+    /* 넘치면 잘라냄 */
+  }
+
+  .recipe-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 비율 유지하며 꽉 채움 */
+  }
+
+  .recipe-info h3 {
+    font-size: 0.8rem;
+  }
+
+  .tag {
+    font-size: 0.5rem;
+  }
+
+  .slide-img {
+    width: 100%;
+    max-width: 300px;
+    height: 180px;
+    overflow: hidden;
+    /* 🔥 넘치면 잘라서 일정한 박스 */
+    margin: 0 auto;
+    /* 가운데 정렬 */
+    border-radius: 12px;
+  }
+
+  .slide-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 🔥 자동 크롭 처리 */
+    margin: 0;
+    /* 🔥 margin 제거 */
+  }
+
+  .slide-info {
+    padding: 5% 3%;
+    font-size: 1rem;
+    /* transform: translate(-13%, 0%); */
+  }
+
+  .slide-info h3 {
+    font-size: 1rem;
+
+    margin-bottom: 10px;
+  }
+
+  .arrow-btn-left {
+    margin: 0 200%;
+    transform: translateY(-19vw);
+  }
+
+  .arrow-btn-right {
+    right: 36px;
+    top: 24%;
+  }
+
+  .slide-info {
+    width: 76%;
+    padding: 5% 3%;
+    font-size: 1rem;
+
+  }
+
+  .category-tag {
+    font-size: 2rem;
+    transform: translateX(71%);
+  }
+}
+
+/*****************************378px*****************************************/
+
+@media (max-width: 375px) {
+  .recipe-title {
+    font-size: 2rem;
+    transform: translateX(29%);
+  }
+
+  .search-field {
+    margin-right: -151%;
+    transform: translate(-6vw, 43%);
+  }
+
+  .twin-search-wrapper {
+    flex-direction: column;
+    width: 91%;
+    max-width: 356px;
+  }
+
+  /*검색창*/
+  .search-input {
+    font-size: 0.5rem;
+    border-radius: 0 10px 10px 0;
+  }
+
+  .recipe-search-form-form-a {
+    margin-left: 4vw;
+  }
+
+  .news-category {
+    white-space: nowrap;
+  }
+
+  .news-subtitle,
+  .news-subtitle {
+    font-size: 0.4rem;
+  }
+
+  .search-icon {
+    transform: translate(1%, 1vw);
+  }
+
+  .category-select {
+    font-size: 0.8rem;
+    transform: translate(213%, 4vw);
+  }
+
+  .keyword-input-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 6px;
+    width: 130px;
+    /* 🔥 줄 길이 고정 */
+    max-width: 130px;
+    margin-right: -20px;
+    /*두줄 간격*/
+    transform: translate(115%, 4vw);
+  }
+
+
+  /* 전체 리스트 부모 정렬 제대로 */
+  .recipe-list {
+    transform: none !important;
+    margin: 0 auto !important;
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    /* 🔥 전체 중앙 */
+  }
+
+  /* 개별 레시피 박스 */
+  .recipe-item {
+    width: 100%;
+    max-width: 320px;
+    /* 아이폰 화면 기준 안정폭 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 🔥 정중앙 */
+    justify-content: center;
+    gap: 10px;
+  }
+
+  /* 이미지 박스 */
+  .recipe-img-wrap {
+    width: 100%;
+    max-width: 260px;
+    height: 160px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .recipe-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* 번호 동그라미 */
+  .rank-circle {
+    top: 8px;
+    left: 8px;
+    width: 34px;
+    height: 34px;
+    font-size: 14px;
+  }
+
+  /* 오른쪽 정보 박스 ↓ 세로로 */
+  .recipe-info {
+    width: 90%;
+    background: #fde6a7;
+    border: 1px solid #ebcf9c;
+    border-radius: 6px;
+    padding: 20px 12px;
+    margin: 0 auto;
+    transform: none;
+    text-align: center;
+    /* 중앙정렬 */
+  }
+
+  /********************어묵냉우동?**********************/
+  .category-tag {
+    transform: translateX(41%);
+  }
+
+  .arrow-btn-left {
+    margin: 0 50%;
+    transform: translateY(-19vw);
+  }
+
+  .arrow-btn-right {
+    right: 24px;
+    top: 27%;
+  }
+
+  /*****************************/
+  .time-box {
+    padding: 4px 8px;
+    font-size: 0.8rem;
+  }
+
+  .recipe-info h3 {
+    font-size: 0.7rem;
+    line-height: 1.3;
+  }
+
+  .tag {
+    font-size: 0.6rem;
+    padding: 3px 8px;
+  }
+
+  .slide-info {
+    width: 90%;
+  }
+}

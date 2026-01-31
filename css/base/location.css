@@ -1,0 +1,653 @@
+/* ==================================================
+[00] * ✅ 기본 설정 *
+================================================== */
+/* ✅ 기본 설정 */
+body {
+  margin: 0;
+  overflow-x: hidden;
+  /* 가로 스크롤 완전 차단 */
+  font-family: 'Noto Sans KR', sans-serif;
+}
+/* ==================================================
+[01] 기본 구조 / Story Section 
+================================================== */
+
+.story-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  background-color: #fff;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+/* ==================================================
+[03] 상단 타이틀
+================================================== */
+
+.page-title {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  position: relative;
+  overflow: visible;
+}
+
+.page-title img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/* ==================================================
+[04] 브랜드 배너
+================================================== */
+.page-bs {
+  position: absolute;
+  left: 50%;
+  bottom: 11%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.page-bs img {
+  width: 100%;
+  max-width: 520px;
+}
+
+.page-title h1 {
+  font-size: 1.25rem;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+  text-align: center;
+}
+/* ==================================================
+[05] ✅ 네비게이션 버튼
+================================================== */
+
+.story-nav {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+  transform: translateY(-42%);
+}
+
+.story-nav>.nav-button {
+  padding: 2rem 6rem;
+  font-size: 0.95rem;
+  border: 0.1rem solid transparent;
+  color: #444;
+  background-color: rgba(255, 195, 83, 0.7);
+  border-radius: 0.6rem;
+  font-weight: bold;
+  transition: background 0.2s, color 0.2s;
+  transform: translate(1%, -45%);
+}
+
+
+.nav-button:hover {
+  background-color: #f3d2b1;
+  color: #fff;
+}
+
+.nav-button.active {
+  background-color: #c4a97a;
+  color: #fff;
+}
+
+/* ==================================================
+[06]✅ 지도 섹션
+================================================== */
+.rode {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  top: -2.3rem;
+}
+
+.map {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 1100px;
+  background-color: #d39401;
+  min-height: 400px;
+  box-sizing: border-box;
+  border-radius: 16px;
+  color: #fff;
+  padding: 0 30%;
+  margin: -3% auto;
+  transform: translateY(-6%);
+}
+
+/* ✅ 지도 관련 구성 */
+.map-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+}
+
+.search-box {
+  position: absolute;
+  top: -260px;
+  left: 50%;
+  transform: translateX(-42%);
+  width: 900px;
+  height: 80px;
+  border: 5px solid #434343;
+  border-radius: 50px;
+  background-color: #d5a02d;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  /* 🔥 세로로 흐르는 것 방지 */
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+}
+
+.search-txt {
+  font-size: 2rem;
+}
+
+.search-input {
+  width: 65%;
+  /* 🔥 너무 넓어서 밀리던 현상 해결 */
+  min-width: 120px;
+  /* 🔥 최소폭 보장 (세로 깨짐 방지) */
+  border: none;
+  outline: none;
+  background: transparent;
+  text-align: center;
+  font-size: clamp(1rem, 2vw, 1.8rem);
+  font-weight: bold;
+  color: #333;
+  white-space: nowrap;
+}
+
+.search-btn {
+  flex-shrink: 0;
+  /* 🔥 아이콘이 아래로 내려가는 현상 방지 */
+}
+
+.search-btn img {
+  width: 28px;
+  height: 28px;
+}
+
+/* ==================================================
+[07] ✅ 모달
+================================================== */
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 30px 50px;
+  border-radius: 15px;
+  text-align: center;
+  color: #333;
+  position: relative;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/* ==================================================
+[08] ✅ 지도 마커
+================================================== */
+
+.map-marker {
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -100%);
+  width: 50px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+/* ==================================================
+[09] ✅ 지점 정보
+================================================== */
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-content: flex-start;
+  margin: 2.5rem auto;
+  width: 90%;
+  max-width: 900px;
+  flex-wrap: wrap;
+}
+
+.icon-wrapper {
+  width: 120px;
+  height: 120px;
+  background-color: #fbf3d4;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.icon-wrapper img {
+  width: 70%;
+  height: auto;
+}
+
+.text-wrapper {
+  flex: 1;
+  min-width: 200px;
+  transition: transform 0.3s ease, font-size 0.3s ease;
+  cursor: pointer;
+}
+
+.active-txt {
+  font-size: 2.5rem;
+}
+
+.text-wrapper .active-txt {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+
+}
+
+.text-wrapper p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #333;
+  white-space: nowrap;
+}
+/* ==================================================
+[10] ✅프렌차이즈 섹션
+================================================== */
+.franchise-section {
+  width: 100%;
+  background-color: #e9e4d9;
+  margin-top: 3rem;
+  padding: 3rem 1rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.branch-title {
+  text-align: center;
+  margin-bottom: -8rem;
+}
+
+.branch-title h2 {
+  position: relative;
+  top: 1vw;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+  color: #333;
+}
+
+/* ✅ 이미지 갤러리 */
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+/* ==================================================
+[11] ✅ 모달
+================================================== */
+
+.image-modal {
+  display: none;
+  /* 기본 숨김 */
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(6px);
+}
+
+/* 모달 내부 이미지 */
+.image-modal img {
+  position: relative;
+  /* ✅ z-index 컨텍스트 고정 */
+  z-index: 1;
+  /* 닫기 버튼보다 아래로 */
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  animation: zoomIn 0.3s ease;
+}
+
+
+/* 확대 애니메이션 */
+@keyframes zoomIn {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.gallery-item {
+  flex: 1 1 calc(33.333% - 2rem);
+  max-width: 515px;
+  transform: translatey(49%);
+  margin-bottom: 17%;
+}
+
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+}
+
+/*==============================================================================*/
+@media (max-width: 1024px) {
+  .page-bs img {
+    width: 66%;
+  }
+
+  .search-box {
+    left: 50%;
+  }
+
+}
+
+
+/* ---------- 네비게이션 수정 ---------- */
+@media (max-width: 768px) {
+
+  /***************배너페이지******************/
+  .page-bs img {
+    width: 66%;
+    margin: 0 18%;
+  }
+
+  .button-wrap {
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 2vw;
+  }
+
+
+
+  .story-nav {
+    position: relative;
+    transform: none;
+    margin-top: 1.2rem;
+    z-index: 100;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    /* ✅ 시각적 구분 */
+    padding: 0.8rem 0;
+    border-radius: 10px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .search-box {
+    left: 15%;
+  }
+
+  .story-nav .nav-button {
+    display: inline-block;
+    width: auto;
+    padding: 1rem 4.2rem;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    transform: translateY(-132%);
+  }
+
+  .map {
+    margin: -8% auto;
+  }
+
+  .search-box {
+    width: 600px;
+    left: 44%;
+  }
+
+  /* ---------- 배너 살짝 조정 ---------- */
+  .page-title {
+    height: auto;
+    padding-bottom: 0;
+  }
+
+  .branch-title h2 {
+    top: 3vw;
+  }
+
+  .gallery-item {
+    transform: translate(-2%, 64%);
+  }
+
+  .story-nav {
+    padding-bottom: 2%;
+    transform: translateY(-16%);
+  }
+
+  #mapImage {
+    width: 100%;
+    max-width: 768px;
+    margin-top: -19%;
+  }
+
+}
+
+
+/********************************************************/
+/* 480 이하: 일반 모바일 */
+@media (max-width: 480px) {
+
+  .nav-button.active,
+  .story-nav>.nav-button {
+    padding: 1rem 5rem;
+  }
+
+  .story-nav {
+
+    transform: translateY(-100%);
+  }
+
+  .search-box {
+    width: 400px;
+    left: 44%;
+  }
+
+  .map {
+    transform: translateY(-15%);
+  }
+
+  .branch-title h2 {
+    top: 2.5rem
+  }
+
+  .nav-button.active,
+  .story-nav>.nav-button {
+    padding: 0.5rem 3rem;
+    transform: translateY(-64%);
+  }
+
+  .nav-button.active,
+  .nav-button {
+    white-space: nowrap;
+  }
+
+  .text-wrapper {
+    max-width: 0;
+    overflow: hidden;
+    transform: translate(22%, 0%);
+    white-space: nowrap;
+    padding-bottom: 2%;
+    margin: -10%;
+  }
+
+  .text-wrapper p {
+    font-size: 0.8rem;
+  }
+
+  #mapImage {
+    width: 100%;
+    max-width: 480px;
+    margin-top: -26%;
+  }
+
+  .image-gallery {
+    margin: 3% auto;
+    transform: translatey(-1%);
+  }
+
+  .icon-wrapper {
+    width: 100px;
+    height: 100px;
+  }
+
+  .branch-title {
+    text-align: center;
+    margin-bottom: -2rem;
+  }
+}
+
+/* 375 이하: 일반 모바일 */
+@media (max-width: 375px) {
+  .story-nav {
+    display: flex;
+    justify-content: center;
+    /* 🔹 가로 가운데 정렬 */
+    align-items: center;
+    /* 🔹 세로 가운데 정렬 */
+    flex-wrap: nowrap;
+    /* ✅ 줄바꿈 금지 */
+    transform: translateY(-37%);
+  }
+
+  .rode {
+    width: 100%;
+    max-width: 468px;
+    top: -5.3em;
+  }
+
+  #mapImage {
+    width: 100%;
+    max-width: 375px;
+    margin-top:-20%;
+  }
+
+  .text-wrapper {
+    margin: -21%;
+  }
+
+  .icon-wrapper {
+    width: 80px;
+    height: 80px;
+    margin: 0 9%;
+  }
+
+  .map {
+
+    min-height: 318px;
+  }
+
+  .image-gallery {
+    margin: 7% auto;
+    transform: translatey(5%);
+  }
+
+  .search-box {
+    width: 350px;
+    left: 44%;
+  }
+
+  .text-wrapper2 {
+    margin: 0 -10%
+  }
+
+  .active-txt {
+    font-size: 2rem;
+    white-space: nowrap;
+
+  }
+
+  .text-wrapper p {
+    margin: 0 1%;
+  }
+
+  .branch-title {
+    margin-bottom: -2rem;
+  }
+
+  .branch-title h2 {
+    top: 2.5rem
+  }
+      .nav-button.active, .story-nav>.nav-button {
+        padding: 0.4rem 2.7rem;
+        transform: translateY(-15vw);
+    }
+
+}

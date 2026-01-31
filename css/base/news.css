@@ -1,0 +1,1001 @@
+/* ==================================================
+[00] ✅ 기본 설정
+================================================== */
+
+/* ✅ 기본 설정 */
+body {
+  margin: 0;
+  overflow-x: hidden;
+  /* 가로 스크롤 완전 차단 */
+  font-family: 'Noto Sans KR', sans-serif;
+}
+/* ==================================================
+[01] 기본 구조 / Story Section
+================================================== */
+.story-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  background-color: #fff;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+/* ==================================================
+[02] 상단 타이틀
+================================================== */
+.page-title {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  position: relative;
+  overflow: visible;
+}
+
+.page-title img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 네비게이션 버튼 */
+.story-nav {
+  display: flex;
+  z-index: 10;
+  transform: translateY(-120px);
+  width: 50%;
+  height: 30px;
+  gap: 20px;
+}
+
+/*브랜드 이야기 매장위치 박스*/
+.nav-buttons {
+  color: #444;
+  background-color: #d3a662;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  /* 클릭 가능함을 표시 */
+  transition: background-color 0.3s, color 0.3s;
+  transform: translate(324px, -35px);
+  width: 50%;
+  height: 20%;
+  white-space: nowrap;
+  border-radius: 15px;
+  padding: 40px 176px;
+
+}
+
+.story-nav .nav-buttons .bt1 {
+  display: inline-block;
+  transform: translate(-69px, -15px);
+  font-size: 25px;
+}
+
+.story-nav .nav-buttons .bt2 {
+  display: inline-block;
+  transform: translate(-51px, -16px);
+  font-size: 25px;
+}
+
+/* 마우스를 올렸을 때 스타일 */
+.nav-buttons:hover {
+  background-color: #e89006;
+}
+
+
+
+/* 모든 버튼의 기본 스타일 (공통) */
+.nav-buttons {
+  padding: 45px 179px;
+  color: #444;
+  background-color: #d3a662;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  transform: translateX(-156px) translateY(-25px);
+}
+
+/* 마우스를 올렸을 때 스타일 */
+.nav-buttons:hover {
+  background-color: #90a048;
+}
+
+/* 마우스로 '누르고 있는' 순간의 스타일 */
+.nav-buttons:active {
+  background-color: #a98f62;
+  color: #e0e0e0;
+}
+
+.nav-button {
+  padding: 25px 40px;
+  color: #444;
+  background-color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+  border-right: 1px solid #ccc;
+  /* 오른쪽에 세로선 추가 */
+}
+
+/* 마지막 버튼의 오른쪽 테두리는 제거 */
+.nav-buttons:last-child {
+  border-right: none;
+}
+
+/* ==================================================
+[02-1] 네이게이션 버튼
+================================================== */
+.story-nav {
+  display: flex;
+  z-index: 10;
+  transform: translateY(-120px);
+  width: 50%;
+  height: 30px;
+  gap: 20px;
+}
+/* ==================================================
+[02-2] 브랜드 이야기 매장위치 박스
+================================================== */
+.nav-buttons {
+  color: #444;
+  background-color: #d3a662;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  /* 클릭 가능함을 표시 */
+  transition: background-color 0.3s, color 0.3s;
+  transform: translate(324px, -35px);
+  width: 50%;
+  height: 20%;
+  white-space: nowrap;
+  border-radius: 15px;
+  padding: 40px 176px;
+
+}
+
+.story-nav .nav-buttons .bt1 {
+  display: inline-block;
+  transform: translate(-69px, -15px);
+  font-size: 25px;
+}
+
+.story-nav .nav-buttons .bt2 {
+  display: inline-block;
+  transform: translate(-51px, -16px);
+  font-size: 25px;
+}
+
+/* 마우스를 올렸을 때 스타일 */
+.nav-buttons:hover {
+  background-color: #e89006;
+}
+
+/* 모든 버튼의 기본 스타일 (공통) */
+.nav-buttons {
+  padding: 45px 179px;
+  color: #444;
+  background-color: #d3a662;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  transform: translateX(-156px) translateY(-25px);
+}
+
+/* 마우스를 올렸을 때 스타일 */
+.nav-buttons:hover {
+  background-color: #90a048;
+}
+
+/* 마우스로 '누르고 있는' 순간의 스타일 */
+.nav-buttons:active {
+  background-color: #a98f62;
+  color: #e0e0e0;
+}
+
+.nav-button {
+  padding: 25px 40px;
+  color: #444;
+  background-color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+  border-right: 1px solid #ccc;
+  /* 오른쪽에 세로선 추가 */
+}
+
+/* 마지막 버튼의 오른쪽 테두리는 제거 */
+.nav-buttons:last-child {
+  border-right: none;
+}
+
+/* ==================================================
+ [03] highlights 3
+================================================== */
+/*pc 버전*/
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 16px;
+  transition: transform 0.6s ease;
+}
+
+.card {
+  width: 220px;
+  height: 220px;
+  border-radius: 20px;
+  overflow: hidden;
+  transform: scale(0.9);
+  opacity: 0.6;
+  transition: all 0.6s ease;
+  z-index: 1;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 가운데 카드 */
+.card.active {
+  transform: scale(1.05);
+  opacity: 1;
+  z-index: 3;
+}
+
+
+/*모바일버전*/
+/* 노트북 & 태블릿 가로 (1024px) */
+@media (max-width: 1024px) {}
+
+/* 태블릿 세로 (768px) */
+@media (max-width: 768px) {}
+
+/* 모바일 (480px / 375px) */
+@media (max-width: 480px) {
+  .card {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 375px) {
+  .card {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/****************************검생창*****************************************************/
+/* PC (1920px) - 기본 스타일 */
+.news-search-wrap {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 56%;
+  border-bottom: 1px solid #ddd;
+  max-width: 1180px;
+  margin:10% auto;
+}
+
+/* 카테고리 영역 */
+.search-category {
+  display: flex;
+  flex-direction: column;
+  min-width: 120px;
+}
+
+.search-category label {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.search-category select {
+  border: none;
+  border-bottom: 2px solid #222;
+  padding: 5px;
+  font-size: 16px;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+/* 검색창 */
+.search-input {
+  flex: 1;
+  position: relative;
+}
+
+.search-input input {
+  width: 224px;
+  border: none;
+  border-bottom: 2px solid #222;
+  padding: 32px 35px 5px 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+.search-input .search-icon {
+  position: absolute;
+  right: 5px;
+  top: 37px;
+  transform: translateY(-50%);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* PC (1920px) - 기본 스타일 */
+
+/* 노트북 & 태블릿 가로 (1024px) */
+@media (max-width: 1024px) {
+  .news-search-wrap {
+    padding: 23px 52%;
+  }
+
+  .news-ss {
+    text-align: justify;
+    position: relative;
+    left: 10vw;
+    top: 3vw;
+  }
+}
+
+/* 태블릿 세로 (768px) */
+@media (max-width: 768px) {}
+
+/* 모바일 (480px / 375px) */
+@media (max-width: 480px) {
+  .news-search-wrap {
+    padding: 21px 15%;
+  }
+}
+
+@media (max-width: 375px) {
+  .news-search-wrap {
+    padding: 21px 3%;
+  }
+}
+
+/************************************************/
+.hot-news {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+}
+
+
+.hot-news>.news-img1,
+.hot-news>.news-img2,
+.hot-news>.news-img3 {
+  width: 200px;
+  height: 150px;
+  overflow: hidden;
+  flex-shrink: 0;
+  border-radius: 8px;
+}
+
+
+.news-img1,
+.news-img3 {
+  opacity: 0.5;
+}
+
+.news-img1 {
+  position: relative;
+  left: 60px;
+}
+
+.news-img2 {
+  z-index: 10;
+}
+
+.news-img3 {
+  position: relative;
+  right: 60px;
+}
+
+.hot-news img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* 비율 유지하며 박스를 가득 채움 */
+}
+
+.hot-news-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 30px auto;
+  padding-bottom: 100px;
+}
+
+.container {
+  /* 기존의 패딩과 수직 마진 유지 */
+  padding-bottom: 30px;
+  padding-top: 278px;
+  transform: translateX(-400px);
+  z-index: 5;
+}
+
+/********************************************************************/
+/*1*/
+.news-section {
+  width: 100%;
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+.section-header h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 5px;
+}
+
+/*2*/
+.news-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px dashed #ddd;
+}
+
+
+/*3*/
+
+.news-text-content {
+  flex-grow: 1;
+  padding-right: 20px;
+}
+
+/*4*/
+.news-section {
+  width: 90%;
+  max-width: 800px;
+  margin: 30px auto;
+  /* 💥 섹션 전체를 화면 중앙에 배치 💥 */
+  padding: 0 10px;
+}
+
+.section-header h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 5px;
+  /* 제목 텍스트만 중앙 정렬 (필요하다면) */
+}
+
+/*뉴스 항목*/
+.news-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px dashed #ddd;
+
+}
+
+.news-text-content {
+  flex-grow: 1;
+  padding-right: 20px;
+
+}
+
+.news-main-title {
+  font-size: 17px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.news-subtitle {
+  font-size: 12px;
+  color: #777;
+  margin: 0;
+  line-height: 1.4;
+
+  /* 긴 문장이 한 줄로 제한되도록 (옵션) */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/*GO! 스타일*/
+.click-go-button {
+  flex-shrink: 0;
+  background-color: #dba261;
+  color: #fff;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+}
+/* ==================================================
+   [04] 2025 news
+================================================== */
+.news-ss {
+  text-align: justify;
+  position: relative;
+  left: 10%;
+  top: 74px;
+}
+
+.news-title1-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* 세로 정렬용 */
+  align-items: flex-start;
+  /* 내부 요소 왼쪽 정렬 */
+  text-align: left;
+  /* 텍스트 왼쪽 정렬 */
+  gap: 10px;
+
+  /* 💡 박스를 중앙에 두는 핵심 */
+  width: 80%;
+  /* 원하는 폭 (예: 80%) */
+  max-width: 900px;
+  /* 너무 넓어지지 않게 제한 */
+  margin: 0 auto;
+  /* ✅ 가로 가운데 정렬 */
+}
+
+/***로고와 타이틀 같은줄**/
+.news-header {
+  display: flex;
+  /* ✅ 가로로 정렬 */
+  align-items: center;
+  /* 세로 중앙 맞춤 */
+  justify-content: space-between;
+  /* 왼쪽 카테고리 ↔ 오른쪽 버튼 고정 */
+  gap: 10px;
+  white-space: nowrap
+}
+
+.news-category {
+  font-weight: bold;
+  margin: 0;
+  /* 기본 여백 제거 */
+}
+
+.click-go-button1 {
+  display: inline-block;
+  background-color: #DBA261;
+  /* 버튼 색상 */
+  color: #fff;
+  text-decoration: none;
+  /* 밑줄 제거 */
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background 0.3s;
+  margin-left: 463px;
+}
+
+.click-go-button2 {
+  display: inline-block;
+  background-color: #DBA261;
+  /* 버튼 색상 */
+  color: #fff;
+  text-decoration: none;
+  /* 밑줄 제거 */
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: 500px;
+  transition: background 0.3s;
+  margin-left: 444px;
+}
+
+.click-go-button3 {
+  display: inline-block;
+  background-color: #DBA261;
+  /* 버튼 색상 */
+  color: #fff;
+  text-decoration: none;
+  /* 밑줄 제거 */
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: 500px;
+  transition: background 0.3s;
+  margin-left: 433px;
+}
+
+.click-go-button:hover {
+  background-color: #b97c42;
+  /* 호버 효과 */
+}
+/*hr줄 조절*/
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 20px auto;
+  /* 중앙 정렬 기본 적용 */
+}
+
+
+.news-category,
+.short-divider,
+.news-main-title {
+  display: block;
+  /* 각각 세로로 줄바꿈 */
+}
+
+.short-divider {
+  margin: 5px 0;
+  /* 위아래 여백 */
+  width: 50px;
+  /* 길이 조정 가능 */
+  border: 1px solid #ccc;
+}
+
+.short-divider {
+  /* 적당히 짧은 길이 (예: 250px) */
+  width: 700px;
+
+  /* 선의 색상이나 굵기를 다르게 할 수 있음 */
+  border-top: 2px solid #a07a48;
+}
+
+hr.long-divider {
+  border: none;
+  border-top: 1px dashed #0e0d0d;
+  /* ✅ 선 모양 강제 변경 */
+  width: 70%;
+  margin-left: 0;
+  /* ✅ 왼쪽 정렬 */
+  margin-right: auto;
+}
+
+/***************************1024px 반응형*********************************************/
+@media (max-width: 1024px) {
+  .page-title img {
+    width: 100%;
+    max-width: 1024px;
+    height: 300px;
+
+  }
+
+
+
+  .news-title1-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    gap: 10px;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .news-category {
+    white-space: nowrap;
+    transform: translate(2%, 2vw);
+  }
+
+  .click-go-button1,
+  .click-go-button2,
+  .click-go-button3 {
+    white-space: nowrap;
+  }
+}
+
+
+/***************************768px 반응형*******************************************/
+@media (max-width: 768px) {
+  .page-title img {
+    width: 100%;
+    max-width: 768px;
+    height: 200px;
+
+  }
+
+  .recipe-search-form-form-a {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 0 20px;
+    margin-left: 17vw;
+  }
+
+  .recipe-search-form-form-a {
+    position: relative;
+    left: 10%;
+    transform: translateX(20%);
+    margin-left: 0;
+    width: auto;
+  }
+
+  .search-input .search-icon {
+
+    right: -63px;
+  }
+
+  .news-search-wrap {
+    padding: 21px 43%;
+  }
+
+.category-select {
+    position: relative;
+    /* 👈 transform 기준을 명확히 */
+    transform: translate(-2%, 1vw);
+  }
+
+  .search-icon {
+    margin: 0 30%;
+  }
+
+  .twin-search-wrapper {
+    display: flex;
+    gap: 1px;
+    width: 1%;
+    max-width: 125px;
+    margin: 31px 45%;
+    flex-wrap: inherit;
+  }
+
+  .search-input {
+    font-size: 1.1rem;
+    border-radius: 0 10px 10px 0;
+  }
+
+
+
+  .short-divider {
+    width: 600px;
+    border-top: 2px solid #a07a48;
+  }
+
+  .click-go-button1 {
+    margin-left: 172%;
+  }
+
+  .click-go-button2 {
+    margin-left: 144%;
+  }
+
+  .click-go-button3 {
+    margin-left: 125%;
+  }
+
+  .news-category {
+    white-space: nowrap;
+  }
+
+  .click-go-button1,
+  .click-go-button2,
+  .click-go-button3 {
+    white-space: nowrap;
+  }
+
+  .keyword-input-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 6px;
+
+    margin-right: 66px;
+    /*두줄 간격*/
+  }
+
+}
+
+
+
+/*****************************************************/
+@media (max-width: 480px) {
+  .page-title img {
+    width: 100%;
+    max-width: 480px;
+    height: 150px;
+
+  }
+
+  .recipe-search-form-form-a {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 0 20px;
+    margin-left: 17vw;
+  }
+
+  .category-select {
+    position: relative;
+    /* 👈 transform 기준을 명확히 */
+    transform: translate(84%, 4vw);
+    z-index: 10;
+  }
+
+  .twin-search-wrapper {
+    display: flex;
+    gap: 1px;
+    width: 1%;
+    max-width: 125px;
+    margin: 22px 4px;
+    flex-wrap: inherit;
+  }
+
+  .search-input {
+    font-size: 0.7rem;
+
+    border-radius: 0 10px 10px 0;
+  }
+
+
+
+  .short-divider {
+    width: 400px;
+    border-top: 2px solid #a07a48;
+  }
+
+  .click-go-button1 {
+    margin-left: 80%;
+  }
+
+  .click-go-button2 {
+    margin-left: 58%;
+  }
+
+  .click-go-button3 {
+    margin-left: 45%;
+  }
+
+  .news-main-title {
+    font-size: 0.8rem;
+  }
+
+  .news-category {
+    white-space: nowrap;
+  }
+
+  .keyword-input-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 6px;
+    width: 180px;
+    /* 🔥 줄 길이 고정 */
+    max-width: 180px;
+    margin-right: 58px;
+    /*두줄 간격*/
+    transform: translate(104%, 1vw);
+  }
+      .news-title1-left {
+                max-width: 447px;
+      }
+      .news-subtitle {
+    font-size: 11px;
+  }
+
+}
+
+
+@media (max-width: 375px) {
+.news-ss {
+  left: 34%;
+    top: 30px;
+}
+    .news-search-wrap {
+        padding: 0px 0%;
+    }
+  .page-title img {
+    width: 100%;
+    max-width: 375px;
+    height: 100px;
+
+  }
+
+  .search-input {
+    font-size: 0.5rem;
+    border-radius: 0 10px 10px 0;
+  }
+
+  .twin-search-wrapper {
+    margin: 20PX -18PX;
+  }
+
+  .short-divider {
+    width: 300px;
+    border-top: 2px solid #a07a48;
+  }
+
+  .recipe-search-form-form-a {
+    margin-left: 4vw;
+  }
+
+  .click-go-button1 {
+    margin-left: 100%;
+    padding: 6px 4px;
+    font-size: 0.8rem;
+    transform: translate(12%, 30%);
+  
+  }
+
+  .click-go-button2 {
+    margin-left: 85%;
+    padding: 6px 4px;
+    font-size: 0.8rem;
+    transform: translate(12%, 30%);
+  }
+
+  .click-go-button3 {
+    margin-left: 72%;
+    padding: 6px 4px;
+    font-size: 0.8rem;
+    transform: translate(12%, 30%);
+  }
+
+  .news-category {
+    white-space: nowrap;
+  }
+
+  .news-main-title,
+  .news-subtitle,
+  .news-main-title {
+    font-size: 0.65rem;
+  }
+
+  .news-subtitle,
+  .news-subtitle {
+    font-size: 0.5rem;
+  }
+
+  .search-icon {
+    transform: translate(1%, 1vw);
+  }
+
+  .category-select {
+    font-size: 0.8rem;
+    transform: translate(213%, 4vw);
+  }
+
+  .keyword-input-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 6px;
+    width: 130px;
+    /* 줄 길이 고정 */
+    max-width: 130px;
+    margin-right: -20px;
+    /*두줄 간격*/
+    transform: translate(115%, 4vw);
+  }
+
+  .search-input input {
+    width: 198px;
+  }
+
+  .search-input .search-icon {
+    right: -51px;
+  }
+
+}

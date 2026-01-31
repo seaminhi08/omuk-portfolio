@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오마뎅 | 시그니처 메뉴</title>
+
+    <link rel="icon" href="../img2/om-logo-1.png" type="image/png">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/base/reset.css">
+    <link rel="stylesheet" href="../css/base/header.css">
+    <link rel="stylesheet" href="../css/base/menu.css">
+    <link rel="stylesheet" href="../css/base/footer.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+
+    <!-- Custom JS -->
+    <script src="../script/header.js" defer></script>
+    <script src="../script/main.js" defer></script>
+</head>
+
+
+<body>
+    <!-- ================================================================
+                                    [01] HEADER
+        ================================================================= -->
+    <header class="header">
+        <div class="header-inner">
+
+            <!-- 로고 -->
+            <h1 class="logo">
+                <a href="index.html">
+                    <img src="../img2/om-logo-1.png" alt="오묵 로고">
+                </a>
+            </h1>
+
+            <!-- 오른쪽 그룹 -->
+            <div class="right-group">
+
+                <!-- 오묵 PPT -->
+                <a href="https://www.miricanvas.com/v2/design2/9b0dc62e-7eb6-4a83-b3d8-851f4ca7665c" class="orin">
+                    <img src="../img/shopping-bag.png" alt="">
+                    PPT
+                </a>
+
+                <!-- 오묵 PIFMA -->
+                <a href="https://www.figma.com/design/GRjivl9yfpeURTzNXigGf2/%EC%98%A4%EB%AC%B5?node-id=0-1&p=f&t=UuXYGtyz9Sz3t84m-0"
+                    class="prch">
+                    <img src="../img/shopping-bag.png" alt="">
+                    FIGMA
+                </a>차이즈
+                </a>
+
+                <!-- SNS -->
+                <div class="sns-wrap">
+                    <a href="#" class="sns-link">
+                        <img src="../img/instagram.png" alt="인스타그램" class="insta">
+                    </a>
+
+                    <div class="sns-dropdown">
+                        <a href="https://www.instagram.com/" target="_blank">
+                            <img src="../img/instagram-imgs.png" class="icon-base">
+                        </a>
+                        <a href="https://naver.com" target="_blank">
+                            <img src="../img/naver-icon.png" class="icon-base">
+                        </a>
+                        <a href="https://youtube.com" target="_blank">
+                            <img src="../img/youtube-icon.png" class="icon-base">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 햄버거 -->
+                <div class="hamburger">
+                    <a href="#" id="menu-toggle">
+                        <img src="../img/align-justify.png" alt="메뉴 아이콘">
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+
+    <!-- ================= NAV ================= -->
+    <nav class="nav-bottoms">
+        <ul class="main-menu">
+
+            <li>
+                <a href="#">브랜드</a>
+                <ul class="sub-menu">
+                    <li><a href="story.html">오마뎅 이야기</a></li>
+                    <li><a href="recipes.html">오마뎅 레시피</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">메뉴소개</a>
+                <ul class="sub-menu">
+                    <li><a href="menu.html">통합 메뉴</a></li>
+                    <li><a href="recipes.html">레시피</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#" class="menu-3">매장</a>
+                <ul class="sub-menu">
+                    <li><a href="location.html">매장찾기</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#" class="menu-4">소식</a>
+                <ul class="sub-menu">
+                    <li><a href="story.html">오마뎅소식</a></li>
+                    <li><a href="reviews.html">이벤트</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">고객의소리</a>
+                <ul class="sub-menu">
+                    <li><a href="voice-of-customers.html">FAQ</a></li>
+                </ul>
+            </li>
+
+        </ul>
+
+        <!-- mega-all -->
+        <div class="mega-all">
+            <div class="col">
+                <ul>
+                    <li><a href="story.html">어묵소개</a></li>
+                    <li><a href="location.html">위치</a></li>
+                </ul>
+            </div>
+
+            <div class="col">
+                <ul>
+                    <li><a href="menu.html">통합 메뉴</a></li>
+                    <li><a href="recipes.html">레시피</a></li>
+                </ul>
+            </div>
+
+            <div class="col">
+                <ul>
+                    <li><a href="location.html">매장찾기</a></li>
+                </ul>
+            </div>
+
+            <div class="col">
+                <ul>
+                    <li><a href="news.html">오묵 News</a></li>
+                    <li><a href="reviews.html">이벤트</a></li>
+                </ul>
+            </div>
+
+            <div class="col">
+                <ul>
+                    <li><a href="voice-of-customers.html">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- ================= SIDE MENU ================= -->
+    <div class="side-menu" id="side-menu">
+
+        <!-- 닫기 버튼 (항상 ul 바깥!) -->
+        <a href="#" class="close-btn" id="close-menu">×</a>
+
+        <ul class="siders">
+
+            <li class="has-sub">
+                <a href="#">브랜드</a>
+                <ul class="sub-menu">
+                    <li><a href="story.html">어묵소개</a></li>
+                    <li><a href="location.html">위치</a></li>
+                </ul>
+            </li>
+
+            <li class="has-sub">
+                <a href="#">메뉴소개</a>
+                <ul class="sub-menu">
+                    <li><a href="menu.html">통합 메뉴</a></li>
+                    <li><a href="recipes.html">레시피</a></li>
+                </ul>
+            </li>
+
+            <li class="has-sub">
+                <a href="#">매장</a>
+                <ul class="sub-menu">
+                    <li><a href="location.html">매장찾기</a></li>
+                </ul>
+            </li>
+
+            <li class="has-sub">
+                <a href="#">소식</a>
+                <ul class="sub-menu">
+                    <li><a href="news.html">오묵 News</a></li>
+                </ul>
+            </li>
+
+            <li class="has-sub">
+                <a href="#">고객센터</a>
+                <ul class="sub-menu">
+                    <li><a href="voice-of-customers.html">FAQ</a></li>
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+
+    <!-- ================================================================
+                                    [02] MENU TABS
+        ================================================================= -->
+    <main class="story-content">
+
+
+        <!-- story navigation -->
+
+        <section class="story-navigation">
+            <div class="button-wrap">
+                <a href="#menu-fishsbox" class="menu active">물어묵</a>
+                <a href="#toppings" class="menu">분식</a>
+                <a href="#set-bnner1" class="menu">조합</a>
+                <a href="#pb-products-section" class="menu">PB상품</a>
+            </div>
+        </section>
+
+        <!-- ================================================================
+                                    [03] MD RECOMMEND
+        ================================================================= -->
+        <!-----&lt;--&gt;(1)-사용------------------------>
+
+        <main>
+            <section class="menu-fishsbox" id="menu-fishsbox"><!--필수-->
+
+                <span class="tag">순살어묵</span>
+
+                <div class="arrow-box">
+
+                    <span class="arrow-left">&lt;</span>
+
+                    <!-- 왼쪽 이미지 -->
+                    <div class="menu-left-content">
+                        <img id="menuImage" src="../img2/odg-img1-1.png" alt="순살어묵">
+                    </div>
+
+                    <div class="bm-box">
+
+                        <p class="guide-text">클릭해 보세요~</p>
+
+                        <div class="menu-box-row">
+
+                            <!-- ⭐ data-img 추가 + href 제거 -->
+                            <a href="javascript:void(0)" class="menu-box active" data-img="../img2/odg-img1-1.png">
+                                쭈글이<br>순살
+                            </a>
+
+                            <a href="javascript:void(0)" class="menu-box" data-img="../img2/odg-img2-1.png">
+                                봉 & 바<br>(순살/치즈/떡)
+                            </a>
+
+                            <a href="javascript:void(0)" class="menu-box" data-img="../img2/odg-img3-1.png">
+                                모짜렐라<br>치즈볼
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <span class="arrow-right">&gt;</span>
+            </section>
+        </main>
+
+
+        <!--------------------------------------------------------->
+
+        <section>
+            <div class="section-title-wrapper">
+            </div>
+
+            <div class="frys">
+                <span class="img-fty-left">
+                    <img src="../img2/fishs-img1(7).png" alt="왼쪽 튀김 이미지">
+                </span>
+                <h2 class="title-safe">속이 꽉채운 튀김</h2>
+
+                <p class="fry-detail">
+                    음식의 특징과 정성을 담았습니다.<br>
+                    음식을 단순히 만들어 파는 것이 아니라,<br>
+                    하나하나에 의미를 부여하고 진심을 다해 만듭니다.
+                </p>
+                </article>
+
+                <span class="img-fty-right">
+                    <img src="../img2/fishs-img1(7).png" alt="오른쪽 튀김 이미지">
+                </span>
+
+            </div>
+        </section>
+        <!-- ================================================================
+                                    [04] FISH MENU
+        ================================================================= -->
+
+        <section class="toppings" id="toppings">
+            <h2 class="topping-title">토핑/사이드</h2>
+
+            <div class="product-toppings-container">
+                <!--topping1-->
+                <article class="topping-item">
+                    <img src="../img2/topping-img.png" alt="계란">
+                    <p>
+                        <span>계란</span><br>
+                        고소하고 부드러운 기본 토핑
+                    </p>
+                </article>
+
+                <!--topping2-->
+                <article class="topping-item">
+                    <img src="../img2/topping-img2 (1).png" alt="핫도그">
+                    <p>
+                        <span>핫도그</span><br>
+                        육즙 가득한 바삭한 핫도그 토핑
+                    </p>
+                </article>
+
+                <!--topping3-->
+                <article class="topping-item">
+                    <img src="../img2/topping-img3 (1).png" alt="베이컨">
+                    <p>
+                        <span>베이컨</span><br>
+                        짭짭한 풍미를 더하는 베이컨 토핑
+                    </p>
+                </article>
+                <!--topping4-->
+                <article class="topping-item">
+                    <img src="../img2/topping-img4 (1).png" alt="모짜렐라">
+                    <p>
+                        <span>모짜렐라</span><br>
+                        쭉 늘어나는 진한 치즈 토핑
+                    </p>
+                </article>
+            </div>
+        </section>
+        <!-- ================================================================
+                                    [05] SNACK MENU 
+        ================================================================= -->
+
+        <section class="fryss" id="fryss">
+            <div class="fry-header">
+                <h2 class="fry-title">튀김 상품<span class="fry-desc">쌀가루로 바삭하게 튀김을 만들다</span></h2>
+            </div>
+
+            <div class="product-frys-container">
+                <!--fry-->
+                <article class="fry-item">
+                    <img src="../img2/fry1-1.png" alt="치킨튀김">
+                    <p>
+                        <span>치킨튀김</span><br>
+                        떡볶이랑 찰떡인 튀김
+                    </p>
+                </article>
+
+                <!--fry2-->
+                <article class="fry-item">
+                    <img src="../img2/fry1-2.png" alt="납작 너비아니">
+                    <p>
+                        <span>납작 너비아니</span><br>
+                        고기 가득한 납작 튀김
+                    </p>
+                </article>
+
+                <!--fry3-->
+                <article class="fry-item">
+                    <img src="../img2/fry1-3.png" alt="치즈볼">
+                    <p>
+                        <span>치즈볼</span><br>
+                        치즈가 쭉 늘어나는 튀김
+                    </p>
+                </article>
+                <!--fry4-->
+                <article class="fry-item">
+                    <img src="../img2/fry1-4.png" alt="고구마튀김">
+                    <p>
+                        <span>고구마튀김</span><br>
+                        단맛이 강한 고구마 튀김
+                    </p>
+                </article>
+                <!--fry5-->
+                <article class="fry-item">
+                    <img src="../img2/fry1-5.png" alt="감자튀김">
+                    <p>
+                        <span>감자튀김</span><br>
+                        햇감자로 만든 튀김
+                    </p>
+                </article>
+                <!--fry6-->
+                <article class="fry-item">
+                    <img src="../img2/fry1-6.png" alt="오징어링">
+                    <p>
+                        <span>오징어링</span><br>
+                        왕 크기만한 오징어 튀김
+                    </p>
+                </article>
+            </div>
+        </section>
+        <!-- ================================================================
+                                    [06] SET MENU
+        ================================================================= -->
+        <!-----&lt;--&gt;(2)------------------------->
+        <main>
+            <section class="foodss-box1" id="foodss-box1">
+                <div class="arrow-icon arrow-lefts">&lt;</div>
+
+                <div class="item-visual item-left">
+                    <img id="foodImage" src="../img2/main-poodimg1-1.png" alt="양파크림 떡볶이" />
+                </div>
+
+                <div class="item-text item-right">
+                    <p class="subtitle" id="foodSubtitle">오묵의 비법 소스로 만든 우리 쌀</p>
+                    <h2 class="title" id="foodTitle">양파크림 떡볶이</h2>
+                </div>
+
+                <div class="arrow-icon arrow-rights">&gt;</div>
+            </section>
+
+
+
+
+            <section class="foodss-box3">
+                <div class="philosophy-text">
+                    <h2 class="title">오묵만의 철학은?</h2><br />
+                    <ol class="philosophy-list">
+                        <li>색소, MSG 없는 건강하고 정직한 재료로 만듭니다.</li>
+                        <li>부모와 아이가 함께 즐기는 '동네 첫 번째 단골집'을 꿈꿉니다.</li>
+                        <li>요란한 광고보다 입소문을 믿으며, 점주와 함께 성장합니다.</li>
+                        <li>반짝 유행이 아닌, 오래도록 사랑받는 '프리미엄 분식'의 기준이 되고자 합니다.</li>
+                    </ol>
+                </div>
+                <button class="action-button-bottom">
+                    <img src="../img/vector.png">
+                    <span class="bottom-txt">가맹문의 GO!</span>
+                </button>
+            </section>
+        </main>
+
+        <!-- ================================================================
+                                    [07] SET MENU
+        ================================================================= -->
+        <section>
+            <div class="set-bnner1" id="set-bnner1">
+                <p class="set-txt1"><span class="star">★</span>MD추천<span class="star">★</span></p>
+                <img src="../img/set-menu-imgs1.png">
+                <span class="set-price1"><span class="sets">SET 구매시</span> 18,900원</span>
+            </div>
+            <div class="set-bnner2">
+                <img src="../img/set-menu-imgs2.png">
+                <span class="set-price2"><span class="sets">SET 구매시</span> 14,000원</span>
+            </div>
+        </section>
+        <!-- ================================================================
+                                    [07]PB PRODUCT 
+        ================================================================= -->
+
+        <h2 class="pb-title">PB 상품</h2>
+        <section class="pb-products-section" id="pb-products-section">
+
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="card-image">
+                        <img src="../img2/omok1(2).png" alt="넓쩍 어묵">
+                    </div>
+                    <div class="card-boxs">
+                        <h3 class="card-title">넓쩍 어묵</h3>
+                        <p class="card-description">남녀노소 좋아하는<br>고소한 어묵
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="card-image">
+                        <img src="../img2/omok1(3).png" alt="수제 봉어묵">
+                    </div>
+                    <div class="card-boxs">
+                        <h3 class="card-title">수제 봉어묵</h3>
+                        <p class="card-description">혼자 먹기에도<br>넉넉한 구성</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="card-image">
+                        <img src="../img2/omok1(4).png" alt="수제막대 어묵">
+                    </div>
+                    <div class="card-boxs">
+                        <h3 class="card-title">수제막대 어묵</h3>
+                        <p class="card-description">쫄깃한 식감을 살린<br>막대어묵</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="card-image">
+                        <img src="../img2/omok1(5).png" alt="어묵 탕수육">
+                    </div>
+                    <div class="card-boxs">
+                        <h3 class="card-title">어묵 탕수육<br>(양파)</h3>
+                        <p class="card-description">바삭한 어묵 탕수육과 <br>달콤한 양파의 조화한 메뉴</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="card-image">
+                        <img src="../img2/omok1(6).png" alt="어묵 탕수육2">
+                    </div>
+                    <div class="card-boxs">
+                        <h3 class="card-title">어묵 탕수육<br>(치즈)</h3>
+                        <p class="card-description">바삭한 어묵 탕수육에<br>고소함을 더한 메뉴</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="card-image">
+                        <img src="../img2/omok1(7).png" alt="김말이3">
+                    </div>
+                    <div class="card-boxs">
+                        <h3 class="card-title">어묵 탕수육<br>(달+메+마)</h3>
+                        <p class="card-description">바삭한 어묵 탕수육에<br>고소함을 더한 메뉴</p>
+                    </div>
+
+
+        </section>
+        <!--------------------------------------------------------->
+        <section class="find-store-section">
+            <a href="location-3.html" class="store-button">매장찾기</a>
+        </section>
+        <button class="scroll-top" id="scrollTopBtn" aria-label="맨 위로 이동">▲
+        </button>
+        <!-- 맨 위로 버튼 -->
+        <button class="scroll-top" id="scrollTopBtn">▲</button>
+
+
+        <!-- ================================================================
+                                    [08]FOOTER
+        ================================================================= -->
+        <footer class="footer-buttom">
+            <div class="footer-inner">
+
+                <div class="img-footer">
+                    <img src="../img2/om-logo-1.png">
+                </div>
+
+                <div class="footer-info">
+                    <p class="footer-left">
+                        강남점 매장 정보<br>
+                        서울시 강남구 학동로 137-6 엠빌딩 1층 <br>
+                        강남역 도보 5분 거리<br>
+                        1572-2965
+                    </p>
+                </div>
+
+                <div class="footer-right">
+                    <p>
+                        ⓒ 2025 오마뎅<br>
+                        [인스타그램][카카오톡 채널]<br>
+                        고객센터 1572-2965<br>
+                        [이용약관][개인정보처리방침]
+                    </p>
+                    <p class="tba"> ※ 본 포트폴리오에 사용된 제품·매장 이미지는 <br>오마뎅 공식 홈페이지의 공개 이미지를 기반으로 하며,<br>
+                        상업적 목적 없이 비상업적 개인 포트폴리오 용도로만 사용되었습니다.</p>
+                </div>
+
+            </div>
+        </footer>
+
+
+
+</body>
+
+</html>
