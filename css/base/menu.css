@@ -835,6 +835,11 @@
     .sets {
     font-size: 0.8rem;
 }
+    .set-txt1 {
+        font-size: 1.3rem;
+        transform: translate(-7vw, -8vw);
+    }
+
 }
 
 /* Mobile (≤ 375px) */
@@ -842,10 +847,11 @@
         .sets {
     font-size: 0.6rem;
 }
+    .set-txt1 {
+        font-size: 1rem;
+        transform: translate(-7vw, -13vw);
+    }
 }
-
-
-
 /* ==================================================
 [06] PB PRODUCT
 ================================================== */
