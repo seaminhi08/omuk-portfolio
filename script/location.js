@@ -9,7 +9,6 @@ function openModal(event, link) {
   const storeTitle = document.getElementById("storeTitle");
   const storeInfo = document.getElementById("storeInfo");
 
-  // 클릭한 지도에 맞게 내용 변경
   if (link.includes("xTSVAHgXTfgp1YUP8")) {
     storeTitle.textContent = "오마뎅 대치점";
     storeInfo.innerHTML = "서울특별시 강남구 대치동 123-4<br>📞 02-123-4567";
@@ -27,7 +26,6 @@ function openModal(event, link) {
   modal.style.display = "flex";
   clearTimeout(redirectTimer);
 
-  // 2초 후 자동 이동
   redirectTimer = setTimeout(() => {
     window.open(link, "_blank");
   }, 2000);
@@ -47,19 +45,19 @@ function searchStore() {
   }
 
   const storeData = {
-    "대치점": {
+    대치점: {
       img: "img4/warps1.png",
       link: "https://maps.app.goo.gl/xTSVAHgXTfgp1YUP8",
       title: "오마뎅 대치점",
       info: "서울특별시 강남구 대치동 123-4<br>📞 02-123-4567"
     },
-    "엘스점": {
+    엘스점: {
       img: "img4/warps2.png",
       link: "https://maps.app.goo.gl/DsTbJWGAHUcUZ2ug6",
       title: "오마뎅 엘스점",
       info: "서울특별시 송파구 올림픽로 35길 124<br>📞 02-234-5678"
     },
-    "수내점": {
+    수내점: {
       img: "img4/warps3.png",
       link: "https://maps.app.goo.gl/UvDvEVR4BunWdPSU6",
       title: "오마뎅 수내점",
@@ -68,26 +66,25 @@ function searchStore() {
   };
 
   const store = storeData[input];
-  if (store) {
-    mapImage.src = store.img;
-
-    storeTitle.textContent = store.title;
-    storeInfo.innerHTML = store.info;
-    modal.style.display = "flex";
-
-    clearTimeout(redirectTimer);
-    redirectTimer = setTimeout(() => {
-      window.open(store.link, "_blank");
-    }, 2000);
-  } else {
+  if (!store) {
     alert("해당 매장을 찾을 수 없습니다 😢");
+    return false;
   }
+
+  mapImage.src = store.img;
+  storeTitle.textContent = store.title;
+  storeInfo.innerHTML = store.info;
+  modal.style.display = "flex";
+
+  clearTimeout(redirectTimer);
+  redirectTimer = setTimeout(() => {
+    window.open(store.link, "_blank");
+  }, 2000);
 
   return false;
 }
 
 /********************************** 모달 닫기 ******************************************/
-// ✅ 지도용 모달 닫기 함수 (기존 유지)
 function closeModal() {
   const storeModal = document.getElementById("storeModal");
   if (storeModal) {
@@ -96,45 +93,32 @@ function closeModal() {
   }
 }
 
-// ✅ 이미지 확대용 모달
+/********************************** 이미지 확대 모달 ******************************************/
 document.addEventListener("DOMContentLoaded", () => {
   const imageModal = document.getElementById("imageModal");
   const modalImg = document.getElementById("modalImage");
-  const closeBtn = imageModal ? imageModal.querySelector(".close-btn") : null;
+  const closeBtn = imageModal?.querySelector(".close-btn");
   const galleryImgs = document.querySelectorAll(".image-gallery img");
 
-  console.log("✅ JS 실행됨"); // 실행 확인용
+  console.log("✅ JS 실행됨");
 
-  // 이미지 클릭 시 모달 열기
   galleryImgs.forEach(img => {
     img.addEventListener("click", () => {
       if (!imageModal || !modalImg) return;
       imageModal.style.display = "flex";
       modalImg.src = img.src;
       modalImg.alt = img.alt;
-      console.log("🟢 이미지 모달 열림");
     });
   });
 
-  // 닫기 버튼 클릭 시 닫기
-  if (closeBtn) {
-    closeBtn.addEventListener("click", e => {
-      e.stopPropagation(); // 배경 클릭 이벤트 중복 방지
-      console.log("❌ 이미지 모달 닫기 클릭됨");
+  closeBtn?.addEventListener("click", e => {
+    e.stopPropagation();
+    imageModal.style.display = "none";
+  });
+
+  imageModal?.addEventListener("click", e => {
+    if (e.target === imageModal) {
       imageModal.style.display = "none";
-    });
-  } else {
-    console.warn("⚠️ close-btn을 찾지 못했습니다.");
-  }
-
-  // 배경 클릭 시 닫기
-  if (imageModal) {
-    imageModal.addEventListener("click", e => {
-      if (e.target === imageModal) {
-        console.log("⚫ 배경 클릭 닫힘");
-        imageModal.style.display = "none";
-      }
-    });
-  }
+    }
+  });
 });
-
